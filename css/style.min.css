@@ -2730,6 +2730,12 @@ body {
     height: 55px;
     width: 100%;
     padding: 22px;
+    font-size: 10px;
+  }
+  .btn-orange::after {
+    width: 8px;
+    height: 8px;
+    background-size: cover;
   }
   .application__title {
     font-size: 30px;
@@ -2808,6 +2814,29 @@ body {
   }
   .address.active {
     display: block;
+  }
+  .form__field,
+  .select2-selection--single {
+    height: 55px !important;
+  }
+  .form input,
+  .select2-container .select2-selection--single {
+    font-size: 12px;
+    padding: 19px 18px !important;
+  }
+  .select2-container--default .select2-selection--single .select2-selection__arrow {
+    top: 13px;
+  }
+  .select2-selection__rendered {
+    position: relative;
+    top: -6px;
+    font-weight: 400;
+    font-size: 12px;
+    padding: 0px !important;
+  }
+  .form__field::before {
+    width: 55px;
+    height: 55px;
   }
 }
 @media only screen and (max-width: 430px) {
