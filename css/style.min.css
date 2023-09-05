@@ -2532,6 +2532,15 @@ body {
   .offers__items .offers__item .gray-font {
     font-size: 11px;
   }
+  .offers__items {
+    padding: 0px 0px 96px;
+  }
+  .offers {
+    padding: 0px;
+  }
+  .offers .watch-more {
+    bottom: 0px;
+  }
 }
 @media only screen and (max-width: 768px) {
   .header .nav {
@@ -2540,11 +2549,7 @@ body {
 }
 @media only screen and (max-width: 576px) {
   .watch-more {
-    width: calc(100% - 60px);
     font-size: 12px;
-  }
-  .watch-more span::before {
-    right: 20px;
   }
   .offers__items .offers__item {
     display: none;
@@ -2931,9 +2936,6 @@ body {
   .advantages .decor-left {
     display: flex;
   }
-  .offers {
-    padding: 0px 0px 96px;
-  }
   .offers h2 {
     display: flex;
     flex-direction: column;
@@ -2960,7 +2962,6 @@ body {
   .offers .watch-more {
     width: calc(100% - 30px);
     height: 55px;
-    bottom: -86px;
   }
   .num-items {
     gap: 33px;
@@ -2968,7 +2969,7 @@ body {
   .num-items__title {
     padding: 0px;
     font-size: 24px;
-    letter-spacing: 1.2px;
+    letter-spacing: 1.1px;
   }
   .num-items .num-item__number {
     font-size: 34px;
