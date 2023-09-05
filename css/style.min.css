@@ -625,7 +625,7 @@ sup {
   font-size: 15px;
   font-weight: 400;
   line-height: 155%;
-  background-color: #333;
+  background: transparent;
   border: none;
   outline: none;
 }
@@ -642,9 +642,12 @@ sup {
   width: 389px;
   height: 80px;
   margin-bottom: 30px;
-  background-color: #fff;
-  opacity: 0.8;
+  background-color: none;
   padding-left: 65px;
+}
+.form__field .select2, .form__field input {
+  position: relative;
+  z-index: 2;
 }
 .form__field::after {
   position: absolute;
@@ -654,7 +657,9 @@ sup {
   transform: translate3d(0, -50%, 0);
   width: 1px;
   height: 17px;
-  background-color: #707070;
+  background-color: transparent;
+  opacity: 0.3;
+  background: #fff;
 }
 .form__field::before {
   position: absolute;
@@ -663,7 +668,17 @@ sup {
   left: 0;
   width: 65px;
   height: 80px;
-  background-color: #333;
+  background: transparent;
+}
+.form__field .form__bg {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0.2;
+  background: #fff;
 }
 .form .form-phone {
   margin-right: 24px;
@@ -720,7 +735,7 @@ sup {
 }
 
 .select2-container--default .select2-selection--single {
-  background-color: #333;
+  background: transparent;
   border: none;
   border-radius: 0;
 }
@@ -890,8 +905,7 @@ input[type=search]:focus {
 }
 .header__nav .nav {
   display: flex;
-  gap: 20px;
-  justify-content: space-between;
+  justify-content: center;
 }
 .header__phone {
   order: 3;
@@ -905,6 +919,9 @@ input[type=search]:focus {
 }
 .header__phone .call {
   align-self: flex-end;
+}
+.header__phone.mobile {
+  display: none;
 }
 
 .headerScroll {
@@ -1566,6 +1583,28 @@ input[type=search]:focus {
 .offers-investors .decor-right .box-6, .offers-investors .decor-right .box-8 {
   border-right: 1px solid #f0f0f0;
 }
+.offers-investors .decor-right .box-8 {
+  position: relative;
+}
+.offers-investors .decor-right .box-8 .logo-2 {
+  bottom: -192px;
+  left: 0px;
+  z-index: 2;
+}
+.offers-investors .decor-right .box-8 .img {
+  position: relative;
+  z-index: 1;
+}
+.offers-investors .decor-right .box-8::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  background-color: rgba(2, 2, 2, 0.7);
+  z-index: 2;
+}
 .offers-investors .decor-right .box-11 {
   border-top: 1px solid #f0f0f0;
 }
@@ -1905,16 +1944,15 @@ body {
     -ms-transform: translateY(0);
     transform: translateY(0);
   }
-  .nav {
+  .header .nav {
     width: auto;
     z-index: 5;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-flow: column;
-    flex-flow: column;
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
+    flex-flow: row;
+    justify-content: space-between;
+    max-width: 758px;
+  }
+  .header .nav .flex {
+    flex-direction: column;
   }
   .pull {
     display: block;
@@ -1932,8 +1970,11 @@ body {
     transform: translate3d(-50%, -50%, 0);
     background-image: url(../img/svgicons/nav.svg);
   }
+  .content.no-padding {
+    padding-top: 0px;
+  }
   .apartments {
-    padding-top: 107px;
+    padding-top: 121px;
   }
   .apartments .decor-img {
     top: 107px;
@@ -2048,6 +2089,61 @@ body {
   .offers-investors .decor {
     display: none;
   }
+  .decor__box {
+    border: 1px solid #f0f0f0 !important;
+  }
+  .apartments .decor-img {
+    display: block;
+  }
+  .company .decor-right {
+    display: flex;
+  }
+  .company .decor-right .box-3,
+  .company .decor-right .box-4,
+  .company .decor-right .box-10,
+  .company .decor-right .box-9,
+  .company .decor-right .box-5 {
+    display: none;
+  }
+  .company .decor-right .flex:last-child {
+    display: none;
+  }
+  .company.section {
+    margin: 0px 0px 9px;
+  }
+  .advantages {
+    padding: 65px 0px 0px;
+  }
+  .advantages .decor-left {
+    display: flex;
+  }
+  .advantages .decor-left .flex {
+    display: flex;
+  }
+  .advantages .decor-left .flex:last-child, .advantages .decor-left .flex:nth-child(3) {
+    display: none;
+  }
+  .advantages .decor-left .flex:nth-child(2) {
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 100%;
+    flex: 1 1 auto;
+  }
+  .advantages .decor-left .box-2 {
+    background: #fff;
+  }
+  .advantages .decor-left .box-3,
+  .advantages .decor-left .box-6 {
+    background-color: #fafafa;
+  }
+  .advantages .decor-left .box-5 {
+    border: none;
+    background: transparent;
+  }
+  .advantages .decor-left .box-4,
+  .advantages .decor-left .box-8 {
+    display: none;
+  }
   .advantages__img .call-modal img {
     width: 23px;
     height: 23px;
@@ -2068,15 +2164,84 @@ body {
   .advantages__items {
     padding-bottom: 100px;
   }
+  .offers .decor-right {
+    display: flex;
+  }
+  .offers .decor-right .flex:first-child {
+    align-items: center;
+    align-self: center;
+  }
+  .offers .decor-right .box-1 {
+    background: #fafafa;
+  }
+  .offers .decor-right .box-6 {
+    display: none;
+  }
+  .offers.left .decor-left {
+    display: flex;
+  }
+  .offers.left .decor-left .box-4 {
+    display: none;
+  }
+  .offers.left .decor-left .box-6 {
+    background: #fafafa;
+  }
+  .offers.left .decor-left .flex {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .offers.left .decor-right {
+    display: none;
+  }
+  .wework .decor-left {
+    display: flex;
+    right: auto;
+    left: 0px;
+  }
+  .wework .decor-left .box-1 {
+    background: none;
+    border: none !important;
+  }
+  .wework .decor-left .flex {
+    display: flex;
+  }
+  .wework .decor-left .box-3,
+  .wework .decor-left .box-8 {
+    display: none;
+  }
+  .wework .decor-left .box-2,
+  .wework .decor-left .box-5 {
+    background: #fafafa;
+  }
+  .num-items__title.section__subtitle {
+    font-size: 24px;
+  }
+  .comments__title span {
+    font-size: 24px;
+  }
+  .offers-investors .decor-right {
+    display: flex;
+    flex-direction: column;
+  }
+  .offers-investors .decor-right .decor__box {
+    display: none;
+  }
+  .offers-investors .decor-right .box-2,
+  .offers-investors .decor-right .box-6,
+  .offers-investors .decor-right .box-7,
+  .offers-investors .decor-right .box-9,
+  .offers-investors .decor-right .box-3 {
+    display: block;
+  }
+  .offers-investors .decor-right .flex {
+    justify-content: flex-end;
+  }
   .decor-left .flex:first-child,
   .application .decor-right .flex:last-child {
     display: block;
   }
   .apartments .decor-right {
     top: 0px;
-  }
-  .decor-right .decor__box {
-    border: 1px solid rgba(255, 255, 255, 0.1);
   }
   .apartments__links {
     height: auto;
@@ -2189,14 +2354,6 @@ body {
     position: absolute;
     height: 100%;
     width: 100%;
-  }
-  .wework .decor-left {
-    right: 0px;
-    left: auto;
-    z-index: 3;
-  }
-  .decor-left .decor__box {
-    border: 1px solid rgba(255, 255, 255, 0.1);
   }
   .wework .box-1,
   .wework .box-2,
@@ -2337,6 +2494,48 @@ body {
   .wework .decor-left .box-4 {
     display: none;
   }
+  .offers .container {
+    padding: 0px 0px 0px 15px !important;
+  }
+  .offers__items .offers__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+  }
+  .offers__items .offers__item .item-img {
+    width: 100%;
+    height: 238px;
+    position: relative;
+    overflow: hidden;
+    margin: 0px 0px 24px;
+  }
+  .offers__items .offers__item .item-img img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0px;
+    left: 0px;
+  }
+  .offers__items .offers__item .item-info {
+    padding: 0px 20px 22px;
+  }
+  .offers__items .offers__item .item-price {
+    font-size: 18px;
+  }
+  .offers__items .offers__item .metro {
+    font-size: 13px;
+    margin: 0px 0px 9px;
+  }
+  .offers__items .offers__item .gray-font {
+    font-size: 11px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .header .nav {
+    justify-content: space-around;
+  }
 }
 @media only screen and (max-width: 576px) {
   .watch-more {
@@ -2348,27 +2547,6 @@ body {
   }
   .offers__items .offers__item {
     display: none;
-  }
-  .offers__items .offers__item:first-child {
-    display: block;
-    flex: 1 1 auto;
-    width: 100%;
-    margin: 0px;
-  }
-  .offers__items .offers__item:first-child .item-squares {
-    z-index: 2;
-  }
-  .offers__items .offers__item:first-child .item-img {
-    position: relative;
-    overflow: hidden;
-  }
-  .offers__items .offers__item:first-child .item-img img {
-    top: 0px;
-    left: 0px;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
   }
   .section__subtitle .orange-font {
     font-size: 24px;
@@ -2393,8 +2571,54 @@ body {
   .footer .logotype img {
     max-width: 240px;
   }
+  .header__nav {
+    padding: 107px 0px 0px;
+    height: 100%;
+    align-items: flex-start;
+    background: rgba(0, 0, 0, 0.95);
+  }
+  .header__nav .nav {
+    flex-direction: column;
+    padding: 66px 29px 48px;
+    gap: 30px;
+    height: 100%;
+  }
+  .header__nav .nav .flex {
+    gap: 30px;
+  }
+  .header::before {
+    border-bottom: 1px solid hsla(0, 0%, 36%, 0.3);
+  }
   .header__phone {
     display: none;
+  }
+  .header__phone.mobile {
+    display: flex;
+    margin: 0px auto;
+    align-items: flex-start;
+    justify-content: flex-end;
+    width: 100%;
+    flex: 1 1 auto;
+    padding: 0px 20px;
+    gap: 13px;
+    position: relative;
+  }
+  .header__phone.mobile .phone {
+    font-size: 20px;
+  }
+  .header__phone.mobile .call {
+    width: 180px;
+    text-align: left;
+    align-self: flex-start;
+  }
+  .header__phone.mobile::before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    bottom: 128px;
+    left: -64px;
+    height: 1px;
+    background: hsla(0, 0%, 36%, 0.3);
   }
   .footer__bottom .container {
     flex-wrap: wrap;
@@ -2495,8 +2719,11 @@ body {
   .form__action {
     width: 100%;
   }
-  .form__action .btn {
+  .form__action .btn,
+  .offers-investors .btn-orange {
+    height: 55px;
     width: 100%;
+    padding: 22px;
   }
   .application__title {
     font-size: 30px;
@@ -2508,8 +2735,50 @@ body {
   .section-info-v2 .section__inner {
     flex-direction: column-reverse;
   }
+  .offers__items {
+    display: block;
+  }
+  .offers__items .offers__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+  }
+  .offers__items .offers__item .item-img {
+    width: 100%;
+    height: 238px;
+    position: relative;
+    overflow: hidden;
+    margin: 0px 0px 24px;
+  }
+  .offers__items .offers__item .item-img img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0px;
+    left: 0px;
+  }
+  .offers__items .offers__item .item-info {
+    padding: 0px 20px 22px;
+  }
+  .offers__items .offers__item .item-price {
+    font-size: 18px;
+  }
+  .offers__items .offers__item .metro {
+    font-size: 13px;
+    margin: 0px 0px 9px;
+  }
+  .offers__items .offers__item .gray-font {
+    font-size: 11px;
+  }
 }
 @media only screen and (max-width: 430px) {
+  .decor__box {
+    width: 106px !important;
+    height: 106px !important;
+    border: 1px solid #f0f0f0 !important;
+  }
   .btn-orange {
     max-width: 100%;
   }
@@ -2526,7 +2795,7 @@ body {
     font-size: 24px;
   }
   .advantages__items {
-    grid-template-columns: 1fr;
+    gap: 19px;
   }
   .offers .orange-font {
     font-size: 20px;
@@ -2534,29 +2803,252 @@ body {
   .wework .num-items {
     grid-template-columns: 1fr;
   }
-  .num-item__number {
+  .header {
+    height: 78px;
+  }
+  .header__logo {
+    height: 37px;
+  }
+  .container {
+    padding: 0px 15px;
+  }
+  .apartments {
+    padding: 126px 0px 55px;
+  }
+  .apartments__title {
+    margin: 0px 0px 12px;
+  }
+  .apartments__description {
+    margin: 0px 0px 24px;
+  }
+  .apartments__link {
+    height: 194px;
+    min-height: 194px;
+  }
+  .apartments__link span {
+    font-size: 14px;
+    left: 18px;
+    bottom: 24px;
+  }
+  .apartments .decor-img {
+    display: block;
+  }
+  .section-info-v1 .section__info,
+  .section-info-v2 .section__info {
+    padding: 45px 14px 0px;
+  }
+  .section__subtitle {
+    text-align: left;
+    margin: 0px 0px 20px;
+  }
+  .company.section {
+    margin: 0px 0px 0px;
+  }
+  .company .section__img::before,
+  .company .section__img .img-1 {
+    max-width: 210px;
+    width: 210px;
+    height: 185px;
+  }
+  .company .section__img .img-2 {
+    height: 113px;
+  }
+  .advantages .section__subtitle {
+    text-align: center;
+  }
+  .advantages .section__subtitle .orange-font {
+    font-weight: 600;
+  }
+  .advantages .section__subtitle .text {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .advantages__item .item-header {
+    margin: 0px 0px 15px;
+  }
+  .advantages__item .icon {
+    position: relative;
+    width: 43px;
+    height: 43px;
+    overflow: hidden;
+  }
+  .advantages__item .icon img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0px;
+    left: 0px;
+  }
+  .advantages__item .number {
+    font-size: 24px;
+  }
+  .advantages__item .number i {
+    font-size: 16px;
+  }
+  .advantages__item .name {
+    font-size: 12px;
+  }
+  .advantages__img .call-modal {
+    padding: 23px;
+    height: 55px;
+  }
+  .advantages .decor-left {
+    display: flex;
+  }
+  .offers {
+    padding: 0px 0px 96px;
+  }
+  .offers h2 {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 0px 41px;
+  }
+  .offers .simple-text, .offers .orange-font {
+    position: static;
+    text-align: center;
+  }
+  .offers .simple-text {
+    font-size: 14px;
+    margin: 0px 0px 10px;
+  }
+  .offers .orange-font {
+    font-size: 20px;
+  }
+  .offers .watch-more span::before {
+    display: none;
+  }
+  .offers .watch-more span {
+    padding: 0px;
+    text-align: center;
+  }
+  .offers .watch-more {
+    width: calc(100% - 30px);
+    height: 55px;
+    bottom: -86px;
+  }
+  .num-items {
+    gap: 33px;
+  }
+  .num-items__title {
+    padding: 0px;
+    font-size: 24px;
+    letter-spacing: 1.2px;
+  }
+  .num-items .num-item__number {
     font-size: 34px;
   }
-  .num-item__number i {
+  .num-items .num-item__number i {
     font-size: 24px;
   }
   .num-items__item {
     display: flex;
-    gap: 30px;
+    gap: 25px;
   }
-  .num-item__title {
+  .num-items .num-item__title {
     font-size: 14px;
+    margin: 0px 0px 5px;
   }
-  .num-item__text {
+  .num-items .num-item__text {
     font-size: 13px;
   }
+  .comments__title {
+    display: flex;
+    gap: 5px;
+  }
+  .comments__title span {
+    font-size: 24px;
+  }
   .comments .swiper-button-prev {
-    left: 37px;
+    left: 27px;
   }
   .comments .swiper-button-next {
-    right: 37px;
+    right: 27px;
   }
   .comments .swiper-scrollbar.swiper-scrollbar-horizontal {
     max-width: 70%;
+  }
+  .application {
+    height: auto;
+    padding-bottom: 74px;
+  }
+  .application__title {
+    text-align: center;
+    font-size: 18px;
+    line-height: 145%;
+    margin: 0px 0px 10px;
+  }
+  .application .form__fields {
+    margin: 0px 0px 24px;
+  }
+  .application .form-text {
+    margin: 0px 0px 46px;
+  }
+  .application .form__action .btn {
+    font-size: 10px;
+  }
+  .offers-investors .section__info h2 {
+    margin: 0px 0px 12px;
+  }
+  .offers-investors .section__info h2 span {
+    color: #020202;
+    font-size: 24px;
+  }
+  .section-info-v1 .section__info p,
+  .section-info-v2 .section__info p {
+    font-size: 13px;
+  }
+  .footer__description {
+    font-size: 10px;
+  }
+  .footer__lists {
+    padding: 0px 0px 0px 30px;
+  }
+  .footer__list li {
+    font-size: 12px;
+  }
+  .footer__contacts .location::before, .footer__phone::before {
+    width: 50px;
+    height: 50px;
+  }
+  .footer__contacts .location, .footer__phone {
+    width: 100%;
+    padding: 0px 0px 0px 90px;
+  }
+  .footer__phone .phone {
+    font-size: 18px;
+  }
+  .footer__phone .call {
+    font-size: 12px;
+    width: 140px;
+  }
+  .footer__contacts .description {
+    font-size: 12px;
+  }
+  .footer .social a {
+    width: 40px;
+    height: 40px;
+  }
+  .footer .social a img {
+    width: 18px;
+    height: 18px;
+  }
+  .footer__bottom {
+    padding: 22px 0px 36px;
+    height: fit-content;
+  }
+  .footer__bottom .container {
+    gap: 15px;
+  }
+  .footer__bottom .container * {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 378px) {
+  .comments .swiper-button-prev {
+    left: 47px;
+  }
+  .comments .swiper-button-next {
+    right: 47px;
   }
 }

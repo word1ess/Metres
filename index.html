@@ -28,28 +28,36 @@
         <a href="#" class="header__burger pull">Menu</a>
         <nav class="header__nav">
             <ul class="nav">
-                <li>
-                    <a href="#" class="menu-link">студии</a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">студии в москве</a></li>
-                        <li><a class="dropdown-item" href="#">студии в санкт-петербурге</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a class="nav-link" href="#comments">отзывы</a>
-                </li>
-                <li>
-                    <a class="nav-link" href="#questions">частые вопросы</a>
-                </li>
-                <li>
-                    <a class="nav-link" href="#company">о компании</a>
-                </li>
-                <li>
-                    <a class="nav-link" href="#investors">инвесторам</a>
-                </li>
-                <li>
-                    <a class="nav-link" href="#contacts">контакты</a>
-                </li>
+                <div class="flex">
+                    <li>
+                        <a href="#" class="menu-link">студии</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">студии в москве</a></li>
+                            <li><a class="dropdown-item" href="#">студии в санкт-петербурге</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#comments">отзывы</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#questions">частые вопросы</a>
+                    </li>
+                </div>
+                <div class=" flex">
+                    <li>
+                        <a class="nav-link" href="#company">о компании</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#investors">инвесторам</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#contacts">контакты</a>
+                    </li>
+                </div>
+                <a href="#" class="header__phone order-call mobile">
+                    <span class="phone">8 (800) 500 8 500</span>
+                    <span class="call">Заказать звонок</span>
+                </a>
             </ul>
         </nav>
         <a href="#" class="header__phone order-call">
@@ -58,7 +66,7 @@
         </a>
     </div>
 </header>
-            <main class="content">
+            <main class="content no-padding">
                 <section class="apartments section">
                     <div class="container">
                         <h1 class="apartments__title">Квартиры-студии</h1>
@@ -305,7 +313,7 @@
                         </div>
                     </div>
                 </section>
-                <section class="offers section">
+                <section class="offers section left">
                     <div class="decor decor-left flex">
                         <div class="flex --dir-col">
                             <div class="decor__box box-1"></div>
@@ -338,63 +346,65 @@
                             <span class="simple-text">предложения</span>
                             <span class="orange-font">в москве</span>
                         </h2>
-                        <div class="offers__items flex">
-                            <a href="#" class="offers__item item">
-                                <div class="item-squares">14 м<sup>2</sup></div>
-                                <div class="item-img">
-                                    <img src="img/index/offers/offers-img1.jpg" alt="image">
-                                </div>
-                                <div class="item-info">
-                                    <div class="item-price">14 200 400 ₽</div>
-                                    <div class="item-location">
-                                        <span class="metro">м. Чеховская</span>
-                                        <span class="gray-font">5 минут пешком</span>
+                        <div class="offers__items flex swiper">
+                            <div class="swiper-wrapper">
+                                <a href="#" class="offers__item item swiper-slide">
+                                    <div class="item-squares">14 м<sup>2</sup></div>
+                                    <div class="item-img">
+                                        <img src="img/index/offers/offers-img1.jpg" alt="image">
                                     </div>
-                                </div>
-                            </a>
-                            <a href="#" class="offers__item item">
-                                <div class="item-squares">14 м<sup>2</sup></div>
-                                <div class="item-img">
-                                    <img src="img/index/offers/offers-img2.jpg" alt="image">
-                                </div>
-                                <div class="item-info">
-                                    <div class="item-price">14 200 400 ₽</div>
-                                    <div class="item-location">
-                                        <span class="metro">м. Чеховская</span>
-                                        <span class="gray-font">5 минут пешком</span>
+                                    <div class="item-info">
+                                        <div class="item-price">14 200 400 ₽</div>
+                                        <div class="item-location">
+                                            <span class="metro">м. Чеховская</span>
+                                            <span class="gray-font">5 минут пешком</span>
+                                        </div>
                                     </div>
-                                </div>
-                            </a>
-                            <a href="#" class="offers__item item">
-                                <div class="item-squares">14 м<sup>2</sup></div>
-                                <div class="item-img">
-                                    <img src="img/index/offers/offers-img3.jpg" alt="image">
-                                </div>
-                                <div class="item-info">
-                                    <div class="item-price">14 200 400 ₽</div>
-                                    <div class="item-location">
-                                        <span class="metro">м. Чеховская</span>
-                                        <span class="gray-font">5 минут пешком</span>
+                                </a>
+                                <a href="#" class="offers__item item swiper-slide">
+                                    <div class="item-squares">14 м<sup>2</sup></div>
+                                    <div class="item-img">
+                                        <img src="img/index/offers/offers-img2.jpg" alt="image">
                                     </div>
-                                </div>
-                            </a>
-                            <a href="#" class="offers__item item">
-                                <div class="item-squares">14 м<sup>2</sup></div>
-                                <div class="item-img">
-                                    <img src="img/index/offers/offers-img4.jpg" alt="image">
-                                </div>
-                                <div class="item-info">
-                                    <div class="item-price">14 200 400 ₽</div>
-                                    <div class="item-location">
-                                        <span class="metro">м. Чеховская</span>
-                                        <span class="gray-font">5 минут пешком</span>
+                                    <div class="item-info">
+                                        <div class="item-price">14 200 400 ₽</div>
+                                        <div class="item-location">
+                                            <span class="metro">м. Чеховская</span>
+                                            <span class="gray-font">5 минут пешком</span>
+                                        </div>
                                     </div>
-                                </div>
-                            </a>
+                                </a>
+                                <a href="#" class="offers__item item swiper-slide">
+                                    <div class="item-squares">14 м<sup>2</sup></div>
+                                    <div class="item-img">
+                                        <img src="img/index/offers/offers-img3.jpg" alt="image">
+                                    </div>
+                                    <div class="item-info">
+                                        <div class="item-price">14 200 400 ₽</div>
+                                        <div class="item-location">
+                                            <span class="metro">м. Чеховская</span>
+                                            <span class="gray-font">5 минут пешком</span>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="offers__item item swiper-slide">
+                                    <div class="item-squares">14 м<sup>2</sup></div>
+                                    <div class="item-img">
+                                        <img src="img/index/offers/offers-img4.jpg" alt="image">
+                                    </div>
+                                    <div class="item-info">
+                                        <div class="item-price">14 200 400 ₽</div>
+                                        <div class="item-location">
+                                            <span class="metro">м. Чеховская</span>
+                                            <span class="gray-font">5 минут пешком</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </section>
-                <section class="offers section">
+                <section class="offers section ">
                     <div class="decor decor-left flex">
                         <div class="flex --dir-col">
                             <div class="decor__box box-1"></div>
@@ -429,59 +439,61 @@
                             <span class="simple-text">предложения</span>
                             <span class="orange-font">В санкт-петербурге</span>
                         </h2>
-                        <div class="offers__items flex">
-                            <a href="#" class="offers__item item">
-                                <div class="item-squares">14 м<sup>2</sup></div>
-                                <div class="item-img">
-                                    <img src="img/index/offers/offers2-img1.jpg" alt="image">
-                                </div>
-                                <div class="item-info">
-                                    <div class="item-price">14 200 400 ₽</div>
-                                    <div class="item-location">
-                                        <span class="metro">м. Чеховская</span>
-                                        <span class="gray-font">5 минут пешком</span>
+                        <div class="offers__items flex swiper offers-second">
+                            <div class="swiper-wrapper">
+                                <a href="#" class="offers__item item swiper-slide">
+                                    <div class="item-squares">14 м<sup>2</sup></div>
+                                    <div class="item-img">
+                                        <img src="img/index/offers/offers2-img1.jpg" alt="image">
                                     </div>
-                                </div>
-                            </a>
-                            <a href="#" class="offers__item item">
-                                <div class="item-squares">14 м<sup>2</sup></div>
-                                <div class="item-img">
-                                    <img src="img/index/offers/offers2-img2.jpg" alt="image">
-                                </div>
-                                <div class="item-info">
-                                    <div class="item-price">14 200 400 ₽</div>
-                                    <div class="item-location">
-                                        <span class="metro">м. Чеховская</span>
-                                        <span class="gray-font">5 минут пешком</span>
+                                    <div class="item-info">
+                                        <div class="item-price">14 200 400 ₽</div>
+                                        <div class="item-location">
+                                            <span class="metro">м. Чеховская</span>
+                                            <span class="gray-font">5 минут пешком</span>
+                                        </div>
                                     </div>
-                                </div>
-                            </a>
-                            <a href="#" class="offers__item item">
-                                <div class="item-squares">14 м<sup>2</sup></div>
-                                <div class="item-img">
-                                    <img src="img/index/offers/offers2-img3.jpg" alt="image">
-                                </div>
-                                <div class="item-info">
-                                    <div class="item-price">14 200 400 ₽</div>
-                                    <div class="item-location">
-                                        <span class="metro">м. Чеховская</span>
-                                        <span class="gray-font">5 минут пешком</span>
+                                </a>
+                                <a href="#" class="offers__item item swiper-slide">
+                                    <div class="item-squares">14 м<sup>2</sup></div>
+                                    <div class="item-img">
+                                        <img src="img/index/offers/offers2-img2.jpg" alt="image">
                                     </div>
-                                </div>
-                            </a>
-                            <a href="#" class="offers__item item">
-                                <div class="item-squares">14 м<sup>2</sup></div>
-                                <div class="item-img">
-                                    <img src="img/index/offers/offers2-img4.jpg" alt="image">
-                                </div>
-                                <div class="item-info">
-                                    <div class="item-price">14 200 400 ₽</div>
-                                    <div class="item-location">
-                                        <span class="metro">м. Чеховская</span>
-                                        <span class="gray-font">5 минут пешком</span>
+                                    <div class="item-info">
+                                        <div class="item-price">14 200 400 ₽</div>
+                                        <div class="item-location">
+                                            <span class="metro">м. Чеховская</span>
+                                            <span class="gray-font">5 минут пешком</span>
+                                        </div>
                                     </div>
-                                </div>
-                            </a>
+                                </a>
+                                <a href="#" class="offers__item item swiper-slide">
+                                    <div class="item-squares">14 м<sup>2</sup></div>
+                                    <div class="item-img">
+                                        <img src="img/index/offers/offers2-img3.jpg" alt="image">
+                                    </div>
+                                    <div class="item-info">
+                                        <div class="item-price">14 200 400 ₽</div>
+                                        <div class="item-location">
+                                            <span class="metro">м. Чеховская</span>
+                                            <span class="gray-font">5 минут пешком</span>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="offers__item item swiper-slide">
+                                    <div class="item-squares">14 м<sup>2</sup></div>
+                                    <div class="item-img">
+                                        <img src="img/index/offers/offers2-img4.jpg" alt="image">
+                                    </div>
+                                    <div class="item-info">
+                                        <div class="item-price">14 200 400 ₽</div>
+                                        <div class="item-location">
+                                            <span class="metro">м. Чеховская</span>
+                                            <span class="gray-font">5 минут пешком</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -686,12 +698,14 @@
                                                 name="phone"
                                                 required="required"
                                                 class="required-field phone">
+                                            <div class="form__bg"></div>
                                         </div>
                                         <div class="form__field form-select">
                                             <select class="select-city" name="state">
                                                 <option value="mos">Москва</option>
                                                 <option value="spb">Санкт-Петербург</option>
                                             </select>
+                                            <div class="form__bg"></div>
                                         </div>
                                     </div>
                                     <div class="form__action">
@@ -819,40 +833,46 @@
                             <div class="decor__box box-4">
                             </div>
                         </div>
-                        <div class="flex">
-                            <div class="decor__box box-5">
-                            </div>
+                        <div class="flex --just-end">
                             <div class="decor__box box-6 bg-fafafa">
                             </div>
-                        </div>
-                        <div class="flex">
                             <div class="decor__box box-7">
                             </div>
                             <div class="decor__box box-8">
-                                <img src="img/svgicons/plus.svg" alt="" class="plus">
+                                <img src="img/index/investors/investors-img3.jpg" alt="main" class="img">
+                                <div class="logo-2">
+                                    <img src="img/svgicons/logo-small.svg" alt="logo">
+                                </div>
                             </div>
                         </div>
                         <div class="flex">
                             <div class="decor__box box-9">
                             </div>
                             <div class="decor__box box-10">
+                                <img src="img/svgicons/plus.svg" alt="" class="plus">
                             </div>
                             <div class="decor__box box-11">
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="decor__box box-12">
+                            </div>
+                            <div class="decor__box box-13">
+
+                            </div>
+                            <div class="decor__box box-14">
                                 <img src="img/svgicons/plus.svg" alt="" class="plus">
                                 <span class="decor-text decor-text-left">metri</span>
                             </div>
-                            <div class="decor__box box-12">
+                            <div class="decor__box box-15">
                             </div>
                         </div>
                         <div class="flex --just-end">
-                            <div class="decor__box box-13 bg-fafafa">
+                            <div class="decor__box box-16 bg-fafafa">
                             </div>
-                            <div class="decor__box box-14">
+                            <div class="decor__box box-17">
                             </div>
                         </div>
-                    </div>
-                    <div class="decor decor-img">
-                        <img src="img/index/investors/investors-img3.jpg" alt="main" class="img">
                     </div>
                 </section>
             </main>
