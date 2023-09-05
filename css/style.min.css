@@ -1791,6 +1791,10 @@ input[type=search]:focus {
   background: hsla(0, 0%, 27%, 0.2);
 }
 
+.locatiob-tabs {
+  display: none;
+}
+
 /* Слайдер */
 .slider {
   background-color: black;
@@ -2502,7 +2506,7 @@ body {
   }
   .offers__items .offers__item .item-img {
     width: 100%;
-    height: 238px;
+    height: 260px;
     position: relative;
     overflow: hidden;
     margin: 0px 0px 24px;
@@ -2743,7 +2747,7 @@ body {
   }
   .offers__items .offers__item .item-img {
     width: 100%;
-    height: 238px;
+    height: 260px;
     position: relative;
     overflow: hidden;
     margin: 0px 0px 24px;
@@ -2771,6 +2775,34 @@ body {
   }
   .decor__box {
     border: 1px solid #f0f0f0 !important;
+  }
+  .locatiob-tabs {
+    display: flex;
+    gap: 10px;
+  }
+  .locatiob-tabs p {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 135%; /* 16.2px */
+    letter-spacing: 0.36px;
+    text-transform: uppercase;
+    color: #fff;
+    opacity: 0.35;
+  }
+  .locatiob-tabs p.active {
+    color: #ff5e03;
+    letter-spacing: 0.36px;
+    text-decoration-line: underline;
+    opacity: 1;
+  }
+  .city {
+    display: none;
+  }
+  .address {
+    display: none;
+  }
+  .address.active {
+    display: block;
   }
 }
 @media only screen and (max-width: 430px) {
@@ -2857,6 +2889,7 @@ body {
   }
   .advantages .section__subtitle {
     text-align: center;
+    margin: 0px 0px 14px;
   }
   .advantages .section__subtitle .orange-font {
     font-weight: 600;
