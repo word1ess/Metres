@@ -2089,9 +2089,6 @@ body {
   .offers-investors .decor {
     display: none;
   }
-  .decor__box {
-    border: 1px solid #f0f0f0 !important;
-  }
   .apartments .decor-img {
     display: block;
   }
@@ -2772,6 +2769,9 @@ body {
   .offers__items .offers__item .gray-font {
     font-size: 11px;
   }
+  .decor__box {
+    border: 1px solid #f0f0f0 !important;
+  }
 }
 @media only screen and (max-width: 430px) {
   .decor__box {
@@ -2817,9 +2817,11 @@ body {
   }
   .apartments__title {
     margin: 0px 0px 12px;
+    letter-spacing: 1.2px;
   }
   .apartments__description {
     margin: 0px 0px 24px;
+    letter-spacing: 0.6px;
   }
   .apartments__link {
     height: 194px;
