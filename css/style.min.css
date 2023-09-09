@@ -3204,6 +3204,13 @@ body {
   .footer__lists {
     padding: 0px 0px 0px 40px;
   }
+  .nav .dropdown-menu {
+    position: relative;
+    width: 100%;
+  }
+  .nav li {
+    width: 100%;
+  }
 }
 @media only screen and (max-width: 992px) {
   .section {
