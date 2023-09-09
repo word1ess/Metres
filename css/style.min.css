@@ -410,6 +410,10 @@ sup {
   padding: 23px 30px 24px 30px;
   font-size: 14px;
   text-transform: uppercase;
+  transition: all 300ms ease;
+}
+.nav a:hover {
+  color: #ff5e03;
 }
 .nav .menu-link {
   position: relative;
@@ -425,7 +429,39 @@ sup {
   background-image: url(../img/svgicons/triangle.svg);
 }
 .nav .dropdown-menu {
+  position: absolute;
   display: none;
+  z-index: 10;
+  background: rgba(28, 26, 26, 0.98);
+  border-top: 1px solid rgba(255, 95, 3, 0.98);
+  text-transform: none;
+  padding: 34px 30px;
+}
+.nav .dropdown-menu li {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.nav .dropdown-menu li::before {
+  content: "";
+  position: relative;
+  display: block;
+  width: 4px;
+  height: 4px;
+  flex-shrink: 0;
+  background: #ff5e03;
+  top: auto;
+  left: auto;
+}
+.nav .dropdown-menu li .dropdown-item {
+  padding: 0px;
+  transition: all 300ms ease;
+}
+.nav .dropdown-menu li .dropdown-item:hover {
+  color: #ff5e03;
+}
+.nav .dropdown-menu li:not(:last-child) {
+  margin: 0px 0px 20px;
 }
 
 .pull {
@@ -1220,8 +1256,34 @@ input[type=search]:focus {
   .item-page__description .read-more {
     font-size: 14px;
   }
+  .lg-next,
+  .lg-prev {
+    bottom: 70px;
+    background: rgba(0, 0, 0, 0.45);
+  }
+  .lg-thumb-item {
+    width: 100px;
+    height: 100px !important;
+  }
 }
 @media only screen and (max-width: 576px) {
+  .lg-next,
+  .lg-prev {
+    display: none;
+  }
+  .lg-thumb-item {
+    min-width: 100px !important;
+    height: 100px !important;
+  }
+  .lg-group {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0px 0px 0px 150px !important;
+  }
   .item-page__intro {
     margin: 0px 0px 37px;
   }
@@ -1539,7 +1601,7 @@ input[type=search]:focus {
 }
 
 .apartments-list {
-  margin: 0px 0px 90px;
+  margin: 0px 0px 162px;
   position: relative;
 }
 .apartments-list .decor__box {
@@ -1550,10 +1612,13 @@ input[type=search]:focus {
   justify-content: space-between;
   align-items: center;
   margin: 0px 0px 44px;
+  max-width: 1258px;
 }
 .apartments-list__header .page-header__btn {
   font-size: 18px;
   text-transform: none;
+  max-width: 200px;
+  max-height: 60px;
 }
 .apartments-list__title {
   font-family: Montserrat;
@@ -1614,12 +1679,23 @@ input[type=search]:focus {
 .faq-section .decor-right .decor__box {
   border: 1px solid #f0f0f0;
 }
+.faq-section .section__inner {
+  gap: 104px;
+}
+.faq-section .section__img {
+  flex: 0 0 389px !important;
+}
 .faq-section .section__info {
   position: relative;
   flex: 1 1 auto;
+  padding: 0px 15px 0px 0px;
+  max-width: 975px;
 }
 .faq-section .section__subtitle span {
   display: inline-block;
+}
+.faq-section .container {
+  padding: 0px;
 }
 
 @media only screen and (max-width: 1440px) {
@@ -1633,13 +1709,23 @@ input[type=search]:focus {
   .filters__filter.dropdowns {
     flex-direction: column;
   }
+  .faq-section .section__inner {
+    gap: 104px !important;
+  }
+  .faq-section .section__info {
+    position: relative;
+    flex: 1 1 auto;
+    padding: 0px 15px 0px 0px;
+    max-width: 975px;
+  }
 }
 @media only screen and (max-width: 992px) {
   .filters__filters {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 36px;
-    padding: 50px;
+    padding: 50px 50px 0px;
+    margin: 0px 0px 39px;
   }
   .filters__filter.first {
     order: 1;
@@ -1660,6 +1746,9 @@ input[type=search]:focus {
     order: 6;
   }
   .filters__filter.seven {
+    padding: 0px;
+    border-bottom: none;
+    grid-column: span 2;
     order: 7;
   }
   .filters__filter.dropdowns {
@@ -1712,10 +1801,13 @@ input[type=search]:focus {
   }
   .filters__btns button {
     font-size: 13px;
-    padding: 11px 30px !important;
-    width: fit-content !important;
+    padding: 11px 30px;
+    width: fit-content;
     height: 70px;
     margin: 0px !important;
+  }
+  .filters__btns .btn-orange {
+    max-width: 172px;
   }
   .apartments-list {
     margin: 0px 0px 73px;
@@ -1723,12 +1815,15 @@ input[type=search]:focus {
   }
   .apartments-list__header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     margin: 0px 0px 57px;
   }
   .apartments-list__header .page-header__btn {
     display: none;
+  }
+  .apartments-list__header h2 {
+    margin: 0px;
   }
   .apartments-list__title {
     font-size: 35px;
@@ -1742,6 +1837,7 @@ input[type=search]:focus {
     column-gap: 12px;
   }
   .apartments-list__item {
+    padding: 36px 0px 0px;
     background: #fff;
     box-shadow: 0px 4px 100px 0px rgba(208, 208, 208, 0.25);
   }
@@ -1949,6 +2045,12 @@ input[type=search]:focus {
   }
   .faq__row .btn-orange {
     font-size: 10px !important;
+  }
+  .advantages {
+    padding: 0px !important;
+  }
+  .comments__title {
+    justify-content: center;
   }
 }
 .apartments {
@@ -3448,6 +3550,7 @@ body {
     line-height: 145%;
     text-align: center;
     margin: 0px 0px 72px;
+    font-size: 20px;
   }
   .application__info {
     max-width: 100%;
@@ -3483,6 +3586,7 @@ body {
     height: 860px;
     position: relative;
     overflow: hidden;
+    padding: 213px 0px 0px;
   }
   .application .decor-img {
     width: 50%;
@@ -3598,6 +3702,24 @@ body {
   .offers .watch-more {
     bottom: 0px;
   }
+  .application__title {
+    font-size: 40px;
+    margin: 0px 0px 20px;
+  }
+  .advantages .section__subtitle .orange-font {
+    font-size: 35px;
+    letter-spacing: 1.75px;
+  }
+  .advantages .section__subtitle .text {
+    font-size: 18px;
+    letter-spacing: 0.9px;
+  }
+  .advantages .section__subtitle {
+    margin-bottom: 15px;
+  }
+  .advantages__items {
+    padding: 0px 0px 70px;
+  }
 }
 @media only screen and (max-width: 768px) {
   .header .nav {
@@ -3691,7 +3813,7 @@ body {
   }
   .footer__contacts .location {
     flex-direction: column;
-    gap: 30px;
+    gap: 16px;
   }
   .footer__list {
     margin: 0px;
@@ -3891,9 +4013,34 @@ body {
     font-size: 12px;
     padding: 0px !important;
   }
+  .form__fields {
+    gap: 15px;
+    margin: 0px 0px 24px;
+  }
   .form__field::before {
     width: 55px;
     height: 55px;
+  }
+  .application {
+    padding: 95px 0px 0px;
+  }
+  .application__title {
+    font-size: 18px;
+    margin: 0px 0px 28px;
+    letter-spacing: 0.9px;
+  }
+  .application .application__form .form-text {
+    font-size: 12px;
+    letter-spacing: 0.6px;
+    margin: 0px 0px 43px;
+  }
+  .advantages .section__subtitle .orange-font {
+    font-size: 24px;
+    letter-spacing: 1.2px;
+  }
+  .advantages .section__subtitle .text {
+    font-size: 14px;
+    letter-spacing: 0.8px;
   }
 }
 @media only screen and (max-width: 430px) {
@@ -4473,6 +4620,8 @@ body {
   }
   .pagination__pages {
     gap: 10px;
+    flex: 1 1 auto;
+    justify-content: space-between;
   }
   .pagination__pages a {
     font-size: 13px;
@@ -4853,6 +5002,36 @@ body {
     padding: 0px 0px 33px;
   }
 }
+.advantages.for-investors {
+  padding: 0px 0px 197px;
+  margin: 0px;
+}
+.advantages.for-investors .decor-img {
+  left: 0px;
+  right: auto;
+  z-index: 1;
+  height: 100%;
+}
+.advantages.for-investors .decor-img img {
+  width: 390px;
+  height: 100%;
+}
+.advantages.for-investors .decor-left {
+  z-index: 2;
+}
+.advantages.for-investors .decor-left .decor__box {
+  background: transparent;
+}
+.advantages.for-investors .decor-right {
+  top: -254px;
+  flex-direction: column;
+}
+.advantages.for-investors .decor-right .flex {
+  width: 100%;
+}
+.advantages.for-investors .decor-right .decor__box {
+  border: 1px solid #f0f0f0;
+}
 .advantages.for-investors .advantages__items {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -4885,12 +5064,28 @@ body {
   line-height: 135%;
 }
 
+.page-header.for-investors .page-header__row {
+  margin-left: auto;
+  max-width: 1180px;
+  width: 1180px;
+}
+
 @media only screen and (max-width: 992px) {
+  .advantages.for-investors {
+    padding: 0px 0px 75px;
+  }
+  .advantages.for-investors .decor-img {
+    display: none;
+  }
+  .advantages.for-investors .decor-left {
+    display: none;
+  }
   .advantages.for-investors .advantages__items {
     grid-template-columns: repeat(2, 1fr);
     width: 100%;
     column-gap: 45px;
     row-gap: 62px;
+    padding: 0px;
   }
   .advantages.for-investors .advantages__item {
     margin-right: 0px;
@@ -4908,8 +5103,18 @@ body {
   .advantages.for-investors .advantages__item .name {
     font-size: 14px;
   }
+  .page-header.for-investors .page-header__row {
+    max-width: 100%;
+    width: 100%;
+  }
 }
 @media only screen and (max-width: 576px) {
+  .advantages.for-investors {
+    padding: 0px 0px 58px;
+  }
+  .advantages.for-investors .decor-right {
+    display: none;
+  }
   .advantages.for-investors .advantages__items {
     grid-template-columns: 1fr;
     width: 100%;
@@ -4934,7 +5139,37 @@ body {
 }
 .contacts {
   position: relative;
-  height: 769px;
+}
+.contacts .decor-img {
+  left: auto;
+  right: 0px;
+  top: -260px;
+  width: 389px;
+  height: 768px;
+}
+.contacts .decor-img img {
+  width: 389px;
+  height: 768px;
+}
+.contacts .decor-img::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(2, 2, 2, 0.7);
+}
+.contacts .decor-left {
+  top: -210px;
+}
+.contacts .decor-left .decor-text {
+  color: #c1c1c1;
+  rotate: 180deg;
+}
+.contacts .decor-right {
+  top: -60px;
+  flex-direction: column;
 }
 .contacts__row {
   display: flex;
@@ -4942,6 +5177,7 @@ body {
 }
 .contacts__info {
   flex: 0 0 625px;
+  padding: 0px 0px 109px;
 }
 .contacts__title {
   color: #181c22;
@@ -5045,10 +5281,21 @@ body {
   position: relative;
   z-index: 2;
 }
+.contacts__map .page-header__btn {
+  max-width: 200px;
+  max-height: 60px;
+  font-size: 13px;
+}
 
 @media only screen and (max-width: 992px) {
   .contacts {
     height: fit-content;
+    padding: 0px 0px 80px;
+  }
+  .contacts .decor-img,
+  .contacts .decor-left,
+  .contacts .decor-right {
+    display: none;
   }
   .contacts__row {
     display: flex;
@@ -5073,6 +5320,7 @@ body {
   }
   .contacts .btn-orange {
     width: 331px;
+    max-width: 331px;
     height: 80px;
   }
   .contacts__item {
@@ -5106,8 +5354,13 @@ body {
     letter-spacing: 0.6px;
   }
   .contacts__map {
+    overflow: visible;
     flex: none;
     height: 758px;
+  }
+  .contacts__map img {
+    left: -20px;
+    width: calc(100% + 40px);
   }
 }
 @media only screen and (max-width: 576px) {
@@ -5181,10 +5434,13 @@ body {
   .contacts__map .page-header__btns {
     flex-direction: row;
     gap: 0px;
+    justify-content: center;
   }
   .contacts__map .page-header__btn {
     font-size: 10px;
     height: 49px;
+    width: 149px;
+    margin: 0px;
   }
 }
 .intro-about__row {
@@ -5355,7 +5611,11 @@ body {
   column-gap: 86px;
   width: 100%;
   max-width: 1041px;
+  margin: 0px 0px 68px;
   margin-left: auto;
+}
+.advantages.about-page .advantages__item {
+  height: auto;
 }
 .advantages.about-page .advantages__item .item-header {
   margin: 0px 0px 32px;
@@ -5433,7 +5693,7 @@ body {
     display: none !important;
   }
   .about-page {
-    padding: 70px 0px;
+    padding: 60px 0px;
   }
   .about-page__title {
     font-size: 30px;
@@ -5464,6 +5724,9 @@ body {
   .about-page__subtitle, .about-page__title {
     padding-left: 250px;
   }
+  .advantages.about-page {
+    margin: 0px;
+  }
   .advantages.about-page .decor-img {
     width: 176px;
     overflow: hidden;
@@ -5479,7 +5742,9 @@ body {
     grid-template-columns: repeat(2, 1fr);
     row-gap: 39px;
     column-gap: 20px;
+    padding: 0px;
     padding-left: 250px;
+    margin: 0px 0px 52px;
   }
   .advantages.about-page .advantages__item .item-header {
     margin: 0px 0px 18px;
@@ -5497,6 +5762,9 @@ body {
     font-size: 16px;
     font-weight: 500;
     line-height: 135%; /* 24.3px */
+  }
+  .video {
+    padding: 0px 0px 80px;
   }
 }
 @media only screen and (max-width: 576px) {
