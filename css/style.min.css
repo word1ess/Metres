@@ -653,6 +653,7 @@ sup {
   font-size: 70px;
   font-weight: 600;
   letter-spacing: 7px;
+  margin: 0px 0px 19px;
 }
 .num-item__number i {
   color: #020202;
@@ -1214,6 +1215,10 @@ input[type=search]:focus {
   }
 }
 @media only screen and (max-width: 992px) {
+  .lg-outer .lg-thumb-outer.lg-grab .lg-thumb-item {
+    width: 150px;
+    height: 150px !important;
+  }
   .item-page__intro {
     margin: 0px 0px 67px;
   }
@@ -1265,15 +1270,40 @@ input[type=search]:focus {
     width: 100px;
     height: 100px !important;
   }
+  .nav .menu-link::before {
+    display: none;
+    position: relative;
+    content: "";
+    top: 0px;
+    right: 0px;
+    transform: translate3d(0, 0, 0);
+    width: 8px;
+    height: 6px;
+    z-index: 2;
+    background-image: url(../img/svgicons/triangle.svg);
+    background-size: cover;
+    order: 2;
+  }
+  .nav .hasSubmenu {
+    position: relative;
+  }
+  .nav .hasSubmenu .submenu__arrow {
+    position: absolute;
+    display: block;
+    width: 8px;
+    height: 6px;
+    top: 18px;
+    right: 20px;
+    z-index: 10;
+    background-image: url(../img/svgicons/triangle.svg);
+    background-size: cover;
+    order: 2;
+  }
 }
 @media only screen and (max-width: 576px) {
   .lg-next,
   .lg-prev {
     display: none;
-  }
-  .lg-thumb-item {
-    min-width: 100px !important;
-    height: 100px !important;
   }
   .lg-group {
     display: flex !important;
@@ -1282,7 +1312,7 @@ input[type=search]:focus {
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding: 0px 0px 0px 150px !important;
+    padding: 0px 0px 0px 10% !important;
   }
   .item-page__intro {
     margin: 0px 0px 37px;
@@ -1330,6 +1360,16 @@ input[type=search]:focus {
   }
   .headcrumbs__row {
     flex-wrap: wrap;
+  }
+  .lg-outer .lg-thumb-outer.lg-grab .lg-thumb-item {
+    min-width: 105px !important;
+    width: 105px !important;
+    height: 105px !important;
+  }
+}
+@media only screen and (max-width: 378px) {
+  .lg-group {
+    padding: 0px 0px 0px 65% !important;
   }
 }
 .btn-orange,
@@ -2374,7 +2414,7 @@ input[type=search]:focus {
 }
 
 .wework {
-  margin-bottom: 240px;
+  margin-bottom: 80px;
 }
 .wework .decor-text {
   z-index: 2;
@@ -2651,7 +2691,7 @@ input[type=search]:focus {
   position: relative;
   display: flex;
   align-items: center;
-  flex: 0 0 576px;
+  flex: 0 0 705px;
   height: 968px;
 }
 .offers-investors .section__img::before {
@@ -2681,6 +2721,7 @@ input[type=search]:focus {
   flex-direction: column;
   justify-content: center;
   gap: 20px;
+  max-width: 600px;
 }
 .offers-investors .section__info h2 {
   margin: 0px 0px 30px;
@@ -2742,6 +2783,9 @@ input[type=search]:focus {
   color: #c1c1c1;
   transform: rotate(180deg);
   top: 20px;
+}
+.offers-investors .btn-orange {
+  margin-top: 67px;
 }
 
 .bg-fafafa {
@@ -2875,7 +2919,7 @@ input[type=search]:focus {
 .footer__lists {
   display: flex;
   flex-flow: row nowrap;
-  margin-bottom: 24px;
+  margin-bottom: 56px;
   padding: 0px 0px 0px 36px;
 }
 .footer__list {
@@ -3211,8 +3255,16 @@ body {
   .nav li {
     width: 100%;
   }
+  .offers-investors .decor-right .box-8 img,
+  .offers-investors .decor-right .box-8 .logo-2,
+  .offers-investors .decor-right .box-8::before {
+    display: none;
+  }
 }
 @media only screen and (max-width: 992px) {
+  .offers-investors .btn-orange {
+    margin-top: 37px;
+  }
   .section {
     padding-bottom: 0px;
   }
@@ -3442,6 +3494,9 @@ body {
     height: 320px;
     object-fit: fill;
   }
+  .apartments {
+    padding-top: 279px;
+  }
   .section:first-child {
     padding-bottom: 100px;
     margin: 0px 0px 0px;
@@ -3660,6 +3715,9 @@ body {
   .footer__contacts {
     flex-direction: column;
   }
+  .footer__lists {
+    margin: 0px 0px 86px;
+  }
   .wework .decor-left .box-4 {
     display: none;
   }
@@ -3734,6 +3792,12 @@ body {
   }
 }
 @media only screen and (max-width: 576px) {
+  .num-item__number {
+    margin: 0px;
+  }
+  .apartments {
+    padding-top: 126px;
+  }
   .watch-more {
     font-size: 12px;
   }
@@ -3762,6 +3826,9 @@ body {
   }
   .footer .logotype img {
     max-width: 240px;
+  }
+  .footer__lists {
+    margin: 0px 0px 47px;
   }
   .header__nav {
     padding: 107px 0px 0px;
@@ -3911,6 +3978,9 @@ body {
   .form__action {
     width: 100%;
   }
+  .offers-investors .btn-orange {
+    margin-top: 0px;
+  }
   .form__action .btn,
   .offers-investors .btn-orange {
     height: 55px;
@@ -3985,12 +4055,13 @@ body {
     text-transform: uppercase;
     color: #fff;
     opacity: 0.35;
+    text-decoration-line: underline;
   }
   .locatiob-tabs p.active {
     color: #ff5e03;
     letter-spacing: 0.36px;
-    text-decoration-line: underline;
     opacity: 1;
+    text-decoration-line: none;
   }
   .city {
     display: none;
@@ -4090,7 +4161,7 @@ body {
     padding: 0px 15px;
   }
   .apartments {
-    padding: 46px 0px 55px;
+    padding: 126px 0px 55px;
   }
   .apartments__title {
     margin: 0px 0px 12px;
@@ -4213,6 +4284,7 @@ body {
   }
   .num-items .num-item__number {
     font-size: 34px;
+    margin: 0px;
   }
   .num-items .num-item__number i {
     font-size: 24px;
@@ -4264,7 +4336,7 @@ body {
     font-size: 10px;
   }
   .offers-investors .section__info h2 {
-    margin: 0px 0px 12px;
+    margin: 0px 0px -12px;
   }
   .offers-investors .section__info h2 span {
     color: #020202;
@@ -5669,6 +5741,14 @@ body {
   .intro-about__row {
     gap: 56px;
   }
+  .intro-about .page-header__row {
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .intro-about .page-header__row h1 {
+    text-align: left;
+    font-size: 30px;
+  }
   .intro-about__info {
     flex: 1 1 auto;
     max-width: 725px;
@@ -5777,6 +5857,9 @@ body {
 @media only screen and (max-width: 576px) {
   .intro-about {
     position: relative;
+  }
+  .intro-about .page-header__row h1 {
+    font-size: 24px;
   }
   .intro-about__row {
     flex-direction: column;
