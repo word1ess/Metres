@@ -226,6 +226,8 @@ sup {
   -ms-flex-align: center;
   align-items: center;
   color: #020202;
+  padding: 25px 30px 25px 40px;
+  z-index: 2;
 }
 
 .watch-more span {
@@ -233,7 +235,6 @@ sup {
   -ms-flex: 1;
   flex: 1;
   position: relative;
-  padding: 25px 30px 25px 40px;
   letter-spacing: 0.8px;
 }
 
