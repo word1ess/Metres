@@ -1373,8 +1373,16 @@ input[type=search]:focus {
   }
 }
 .btn-orange,
-.btn-submit {
+.btn-submit,
+.page-header__btn,
+.watch-more,
+.btn-bordered,
+.swiper-slide,
+.apartments-list__item,
+.btn-black,
+.page-header__btn.active {
   cursor: pointer;
+  transition: all 300ms ease;
 }
 
 .btn-orange:hover,
@@ -1387,7 +1395,7 @@ input[type=search]:focus {
   border-bottom: 3px solid transparent;
 }
 
-.swiper-slide:hover,
+.item:hover,
 .apartments-list__item:hover {
   border-bottom: 3px solid #ff5e03;
 }
@@ -1706,7 +1714,7 @@ input[type=search]:focus {
 }
 
 .faq-section .decor-left {
-  left: 30px;
+  left: 0px;
 }
 .faq-section .decor-right {
   top: auto;
@@ -1727,9 +1735,9 @@ input[type=search]:focus {
 }
 .faq-section .section__info {
   position: relative;
-  flex: 1 1 auto;
+  flex: 1 1 100%;
   padding: 0px 15px 0px 0px;
-  max-width: 975px;
+  max-width: 975px !important;
 }
 .faq-section .section__subtitle span {
   display: inline-block;
@@ -1927,6 +1935,10 @@ input[type=search]:focus {
   .faq__row .btn-orange {
     margin: 0 auto;
   }
+  .item-description {
+    font-size: 12px;
+    margin: 0px 0px 16px;
+  }
 }
 @media only screen and (max-width: 576px) {
   .filters {
@@ -2092,6 +2104,10 @@ input[type=search]:focus {
   .comments__title {
     justify-content: center;
   }
+  .item-description {
+    font-size: 10px;
+    margin: 0px 0px 12px;
+  }
 }
 .apartments {
   padding: 63px 0px 87px;
@@ -2144,20 +2160,29 @@ input[type=search]:focus {
   height: 100%;
   z-index: 0;
 }
-.apartments__link::before {
+.apartments__link::before, .apartments__link::after {
   position: absolute;
   content: "";
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgb(0, 0, 0);
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(220, 220, 220, 0) 100%);
   z-index: 1;
+  transition: all 300ms ease-in-out;
+}
+.apartments__link::before {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(220, 220, 220, 0) 100%);
+}
+.apartments__link::after {
+  opacity: 0;
+  background: linear-gradient(180deg, #ff5e03 0%, #823002 41.67%, #000 84.9%);
 }
 .apartments__link:hover::before {
+  opacity: 0;
+}
+.apartments__link:hover::after {
   opacity: 0.6;
-  background: linear-gradient(180deg, #ff5e03 0%, #823002 41.67%, #000 84.9%);
 }
 .apartments .container, .apartments__title, .apartments__description, .apartments__links {
   position: relative;
@@ -2360,7 +2385,7 @@ input[type=search]:focus {
 }
 
 .offers {
-  padding-bottom: 100px;
+  padding: 0px;
 }
 .offers h2 {
   padding-top: 0;
@@ -2377,10 +2402,12 @@ input[type=search]:focus {
   position: relative;
   top: -4px;
 }
+.offers__items {
+  padding: 0px 0px 100px;
+}
 .offers__item {
   flex: 0 0 auto;
   width: 360px;
-  height: 516px;
   background: #fff;
   box-shadow: 0px 4px 100px 0px rgba(208, 208, 208, 0.25);
   margin-right: 29px;
@@ -2879,6 +2906,10 @@ input[type=search]:focus {
 }
 .footer a {
   color: #fff;
+  transition: all 300ms ease;
+}
+.footer a:hover {
+  color: #ff5e03;
 }
 .footer__left {
   margin-right: 125px;
@@ -3041,6 +3072,10 @@ input[type=search]:focus {
   width: 52px;
   border-radius: 50%;
   background: hsla(0, 0%, 27%, 0.2);
+  transition: all 200ms ease-in;
+}
+.social a:hover {
+  background: hsla(0, 0%, 27%, 0.1);
 }
 
 .locatiob-tabs {
@@ -3549,7 +3584,7 @@ body {
   .advantages__inner {
     display: block;
   }
-  .offers {
+  .offers__items {
     padding: 0px 0px 115px;
   }
   .watch-more {
@@ -3760,9 +3795,6 @@ body {
   }
   .offers__items {
     padding: 0px 0px 96px;
-  }
-  .offers {
-    padding: 0px;
   }
   .offers .watch-more {
     bottom: 0px;
@@ -4928,6 +4960,7 @@ body {
   text-transform: uppercase;
   padding: 0px 0px 26px 51px;
   border-bottom: 1px solid #f0f0f0;
+  cursor: pointer;
 }
 .faq__slide::before {
   content: attr(data-counter);
