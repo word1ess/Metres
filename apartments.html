@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/css/lg-thumbnail.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/css/lightgallery.min.css" />
     <link rel="stylesheet" href="css/style.min.css">
+    <script defer src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <script defer src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
@@ -25,9 +26,9 @@
             <header class="header">
     <div class="header__inner">
         <a href="index.html" class="header__logo logotype flex">
-            <img src="img/svgicons/logo.svg" alt="logo">
+            <img src="img/svgicons/logo.svg" alt="logo" class="logo-pc">
+            <img src="img/svgicons/logo-mobile.svg" alt="logo" class="logo-mobile">
         </a>
-
         <a href="#" class="header__burger pull">Menu</a>
         <nav class="header__nav">
             <ul class="nav">
@@ -326,8 +327,8 @@
                         <header class="apartments-list__header">
                             <h2 class="section__subtitle apartments-list__title">список <span>Объектов</span></h2>
                             <div class="page-header__btns">
-                                <div data-appartmentType="list" class="page-header__btn active">Списком</div>
-                                <div data-appartmentType="map" class="page-header__btn">На карте</div>
+                                <div data-row="list" class="page-header__btn active">Списком</div>
+                                <div data-row="map" class="page-header__btn">На карте</div>
                             </div>
                         </header>
                         <div class="apartments-list__row" data-appartment="list">
@@ -500,21 +501,8 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="apartments-list__row" data-appartment="map">
-                            <a href="#" class="apartments-list__item item ">
-                                <div class="item-squares">14 м<sup>2</sup></div>
-                                <div class="item-img">
-                                    <img src="img/appartments/1.png" alt="image">
-                                </div>
-                                <div class="item-info">
-                                    <div class="item-price">14 200 400 ₽</div>
-                                    <p class="item-description">Краткий текст описание на несколько слов</p>
-                                    <div class="item-location">
-                                        <span class="metro">м. Чеховская</span>
-                                        <span class="gray-font">5 минут пешком</span>
-                                    </div>
-                                </div>
-                            </a>
+                        <div class="apartments-list__map map" data-appartment="map" id="moscow">
+
                         </div>
                     </div>
                 </section>
@@ -900,7 +888,78 @@
                     </div>
                 </section>
             </main>
-            <footer id="contacts" class="footer">
+            <div class="dialogbox dialogbox-callback">
+    <div class="dialogbox__inner">
+        <div class="dialogbox__window">
+            <div class="dialogbox__close"></div>
+            <div class="dialogbox__form">
+                <h2 class="section__subtitle">
+                    Хотите подберем вам лучший объект?
+                </h2>
+                <p class="form-text">
+                    Оставьте заявку и наши менеджеры
+                    проконсультируют вас по любым вопросам
+                </p>
+                <form action="#" class="form">
+                    <div class="form__fields">
+                        <div class="form__field form-phone">
+                            <label>Телефон</label>
+                            <input type="text"
+                                placeholder="Введите свой телефон"
+                                name="phone"
+                                required="required"
+                                class="required-field phone">
+                            <div class="form__bg"></div>
+                        </div>
+                        <div class="form__action">
+                            <input type="submit" value="ЗАКАЗАТЬ ЗВОНОК" class="btn btn-submit">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="dialogbox dialogbox-consultation">
+    <div class="dialogbox__inner">
+        <div class="dialogbox__window">
+            <div class="dialogbox__close"></div>
+            <div class="dialogbox__form">
+                <h2 class="section__subtitle">
+                    Хотите подберем вам лучший объект?
+                </h2>
+                <p class="form-text">
+                    Оставьте заявку и наши менеджеры
+                    проконсультируют вас по любым вопросам
+                </p>
+                <form action="#" class="form">
+                    <div class="form__fields">
+                        <div class="form__field form-phone">
+                            <label>Телефон</label>
+                            <input type="text"
+                                placeholder="Введите свой телефон"
+                                name="phone"
+                                required="required"
+                                class="required-field phone">
+                            <div class="form__bg"></div>
+                        </div>
+                        <div class="form__field form-select">
+                            <select class="select-city" name="state">
+                                <option value="mos">Москва</option>
+                                <option value="spb">Санкт-Петербург</option>
+                            </select>
+                            <div class="form__bg"></div>
+                        </div>
+                    </div>
+                    <div class="form__action">
+                        <input type="submit" value="Получить консультацию" class="btn btn-submit">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<footer id="contacts" class="footer">
     <div class="footer__main">
         <div class="container">
             <div class="footer__left">

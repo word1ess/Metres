@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/css/lg-thumbnail.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/css/lightgallery.min.css" />
     <link rel="stylesheet" href="css/style.min.css">
+    <script defer src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <script defer src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
@@ -25,9 +26,9 @@
             <header class="header">
     <div class="header__inner">
         <a href="index.html" class="header__logo logotype flex">
-            <img src="img/svgicons/logo.svg" alt="logo">
+            <img src="img/svgicons/logo.svg" alt="logo" class="logo-pc">
+            <img src="img/svgicons/logo-mobile.svg" alt="logo" class="logo-mobile">
         </a>
-
         <a href="#" class="header__burger pull">Menu</a>
         <nav class="header__nav">
             <ul class="nav">
@@ -143,10 +144,11 @@
                             </div>
                             <div class="contacts__map">
                                 <div class="page-header__btns">
-                                    <div data-type="video" class="page-header__btn active">санкт-петербург</div>
-                                    <div data-type="text" class="page-header__btn">Москва</div>
+                                    <div data-geo="Moscow" class="page-header__btn">Москва</div>
+                                    <div data-geo="Piter" class="page-header__btn">санкт-петербург</div>
                                 </div>
-                                <img src="img/contacts/map.png" alt="map">
+                                <div id="moscow" data-town="Moscow" class="map"></div>
+                                <div id="piter" data-town="Piter" class="map"></div>
                             </div>
                         </div>
                     </div>
@@ -279,7 +281,78 @@
                     </div>
                 </section>
             </main>
-            <footer id="contacts" class="footer">
+            <div class="dialogbox dialogbox-callback">
+    <div class="dialogbox__inner">
+        <div class="dialogbox__window">
+            <div class="dialogbox__close"></div>
+            <div class="dialogbox__form">
+                <h2 class="section__subtitle">
+                    Хотите подберем вам лучший объект?
+                </h2>
+                <p class="form-text">
+                    Оставьте заявку и наши менеджеры
+                    проконсультируют вас по любым вопросам
+                </p>
+                <form action="#" class="form">
+                    <div class="form__fields">
+                        <div class="form__field form-phone">
+                            <label>Телефон</label>
+                            <input type="text"
+                                placeholder="Введите свой телефон"
+                                name="phone"
+                                required="required"
+                                class="required-field phone">
+                            <div class="form__bg"></div>
+                        </div>
+                        <div class="form__action">
+                            <input type="submit" value="ЗАКАЗАТЬ ЗВОНОК" class="btn btn-submit">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="dialogbox dialogbox-consultation">
+    <div class="dialogbox__inner">
+        <div class="dialogbox__window">
+            <div class="dialogbox__close"></div>
+            <div class="dialogbox__form">
+                <h2 class="section__subtitle">
+                    Хотите подберем вам лучший объект?
+                </h2>
+                <p class="form-text">
+                    Оставьте заявку и наши менеджеры
+                    проконсультируют вас по любым вопросам
+                </p>
+                <form action="#" class="form">
+                    <div class="form__fields">
+                        <div class="form__field form-phone">
+                            <label>Телефон</label>
+                            <input type="text"
+                                placeholder="Введите свой телефон"
+                                name="phone"
+                                required="required"
+                                class="required-field phone">
+                            <div class="form__bg"></div>
+                        </div>
+                        <div class="form__field form-select">
+                            <select class="select-city" name="state">
+                                <option value="mos">Москва</option>
+                                <option value="spb">Санкт-Петербург</option>
+                            </select>
+                            <div class="form__bg"></div>
+                        </div>
+                    </div>
+                    <div class="form__action">
+                        <input type="submit" value="Получить консультацию" class="btn btn-submit">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<footer id="contacts" class="footer">
     <div class="footer__main">
         <div class="container">
             <div class="footer__left">
