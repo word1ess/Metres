@@ -1415,9 +1415,21 @@ input[type=search]:focus {
     font-size: 16px;
     font-weight: 500;
   }
+  .item-page__slider {
+    max-width: 500px;
+    max-height: 500px;
+  }
   .dialogbox__window {
     padding: 100px;
     width: 100%;
+  }
+  .item-page__slider .thumbs-slides .swiper-slide {
+    aspect-ratio: 1/1;
+    height: auto;
+  }
+  .item-page__slider .item-slider .swiper-button-next,
+  .item-page__slider .item-slider .swiper-button-prev {
+    bottom: 50px;
   }
 }
 @media only screen and (max-width: 992px) {
@@ -1455,6 +1467,14 @@ input[type=search]:focus {
   }
   .item-page__description {
     font-size: 16px;
+  }
+  .item-page__slider {
+    max-width: none;
+    max-height: none;
+  }
+  .item-page__slider .item-slider .swiper-button-next,
+  .item-page__slider .item-slider .swiper-button-prev {
+    bottom: 80px;
   }
   .lg-next,
   .lg-prev {
@@ -2023,11 +2043,21 @@ input[type=search]:focus {
 @media only screen and (max-width: 1440px) {
   .filters__filters {
     display: grid;
-    grid-template-columns: minmax(250px, 470px) minmax(250px, 364px) 1fr;
+    grid-template-columns: minmax(200px, 470px) minmax(200px, 364px) minmax(200px, 364px);
     margin: 0px 0px 25px;
   }
 }
 @media only screen and (max-width: 1280px) {
+  .filters__inputs .input p {
+    font-size: 14px;
+  }
+  .filters__inputs .input input {
+    width: 60px;
+    height: 40px;
+  }
+  .filters__filter {
+    padding: 15px 25px;
+  }
   .filters__filter.dropdowns {
     flex-direction: column;
   }
@@ -5538,6 +5568,49 @@ body {
   width: 1180px;
 }
 
+@media only screen and (max-width: 1280px) {
+  .advantages.for-investors {
+    margin: 0px;
+  }
+  .advantages.for-investors .decor-img {
+    width: 176px;
+    overflow: hidden;
+  }
+  .advantages.for-investors .advantages.about-page .decor {
+    top: 10px;
+  }
+  .advantages.for-investors .decor-left,
+  .advantages.for-investors .decor-right {
+    display: none;
+  }
+  .advantages.for-investors .advantages__items {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 39px;
+    column-gap: 20px;
+    padding: 0px;
+    padding-left: 250px;
+    margin: 0px 0px 52px;
+    max-width: fit-content;
+    width: fit-content;
+  }
+  .advantages.for-investors .advantages__item .item-header {
+    margin: 0px 0px 18px;
+  }
+  .advantages.for-investors .advantages__item .number {
+    font-size: 45px;
+    letter-spacing: 4.5px;
+  }
+  .advantages.for-investors .advantages__item .number i {
+    font-size: 18px;
+    letter-spacing: 2.2px;
+  }
+  .advantages.for-investors .advantages__item .name {
+    color: #020202;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 135%; /* 24.3px */
+  }
+}
 @media only screen and (max-width: 992px) {
   .advantages.for-investors {
     padding: 0px 0px 75px;
@@ -5764,7 +5837,7 @@ body {
   font-size: 13px;
 }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 1200px) {
   .contacts {
     height: fit-content;
     padding: 0px 0px 80px;
@@ -6142,48 +6215,7 @@ body {
     border: none;
   }
 }
-@media only screen and (max-width: 992px) {
-  .intro-about__row {
-    gap: 56px;
-  }
-  .intro-about .page-header__row {
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-  .intro-about .page-header__row h1 {
-    text-align: left;
-    font-size: 30px;
-  }
-  .intro-about__info {
-    flex: 1 1 auto;
-    max-width: 725px;
-  }
-  .intro-about__info .page-header {
-    margin: 0px 0px 35px;
-  }
-  .intro-about__text {
-    font-size: 15px;
-  }
-  .intro-about__text .orange-text {
-    font-size: 15px;
-  }
-  .intro-about__img {
-    flex: 0 0 322px;
-    height: 430px;
-    position: relative;
-    overflow: hidden;
-  }
-  .intro-about__img .logo {
-    width: 70px;
-    height: 70px;
-  }
-  .intro-about .decor-img {
-    width: 195px;
-  }
-  .intro-about .decor-left,
-  .intro-about .decor-right {
-    display: none !important;
-  }
+@media only screen and (max-width: 1280px) {
   .about-page {
     padding: 60px 0px;
   }
@@ -6254,6 +6286,49 @@ body {
     font-size: 16px;
     font-weight: 500;
     line-height: 135%; /* 24.3px */
+  }
+}
+@media only screen and (max-width: 992px) {
+  .intro-about__row {
+    gap: 56px;
+  }
+  .intro-about .page-header__row {
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .intro-about .page-header__row h1 {
+    text-align: left;
+    font-size: 30px;
+  }
+  .intro-about__info {
+    flex: 1 1 auto;
+    max-width: 725px;
+  }
+  .intro-about__info .page-header {
+    margin: 0px 0px 35px;
+  }
+  .intro-about__text {
+    font-size: 15px;
+  }
+  .intro-about__text .orange-text {
+    font-size: 15px;
+  }
+  .intro-about__img {
+    flex: 0 0 322px;
+    height: 430px;
+    position: relative;
+    overflow: hidden;
+  }
+  .intro-about__img .logo {
+    width: 70px;
+    height: 70px;
+  }
+  .intro-about .decor-img {
+    width: 195px;
+  }
+  .intro-about .decor-left,
+  .intro-about .decor-right {
+    display: none !important;
   }
   .video {
     padding: 0px 0px 80px;
