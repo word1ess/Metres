@@ -3476,6 +3476,55 @@ body {
   }
 }
 @media only screen and (max-width: 1440px) {
+  .content.no-padding {
+    padding-top: 0px;
+  }
+  .apartments {
+    padding-top: 121px;
+  }
+  .apartments .decor-img {
+    top: 107px;
+  }
+  .section-info-v1 .section__img {
+    width: 100%;
+  }
+  .section-info-v1 .section__img,
+  .section-info-v1 .img-1 {
+    max-width: 400px;
+  }
+  .wework .box-5,
+  .wework .box-6,
+  .wework .box-7 {
+    background: rgba(255, 255, 255, 0.5);
+  }
+  .section-info-v1 .img-1 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    min-height: 570px;
+    object-fit: cover;
+  }
+  .content {
+    padding: 106px 0px 0px;
+  }
+  .footer__contacts {
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  .header__phone .phone {
+    font-size: 16px;
+  }
+  .header__phone .call {
+    font-size: 12px;
+    text-align: right;
+    padding-right: 20px;
+  }
+}
+@media only screen and (max-width: 1280px) {
   .header {
     height: 107px;
   }
@@ -3513,6 +3562,8 @@ body {
     -ms-flex-align: center;
     align-items: center;
     text-align: center;
+    height: fit-content;
+    padding: 127px 0px 30px;
   }
   .header::before {
     display: block;
@@ -3549,51 +3600,6 @@ body {
     transform: translate3d(-50%, -50%, 0);
     background-image: url(../img/svgicons/nav.svg);
   }
-  .content.no-padding {
-    padding-top: 0px;
-  }
-  .apartments {
-    padding-top: 121px;
-  }
-  .apartments .decor-img {
-    top: 107px;
-  }
-  .section-info-v1 .section__img {
-    width: 100%;
-  }
-  .section-info-v1 .section__img,
-  .section-info-v1 .img-1 {
-    max-width: 400px;
-  }
-  .wework .box-5,
-  .wework .box-6,
-  .wework .box-7 {
-    background: rgba(255, 255, 255, 0.5);
-  }
-  .section-info-v1 .img-1 {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    z-index: -1;
-    height: 100%;
-    width: 100%;
-    min-height: 570px;
-    object-fit: cover;
-  }
-  .content {
-    padding: 106px 0px 0px;
-  }
-  .header__nav {
-    height: fit-content;
-    padding: 127px 0px 30px;
-  }
-  .footer__contacts {
-    flex-direction: column;
-    flex-wrap: wrap;
-    gap: 30px;
-  }
-}
-@media only screen and (max-width: 1280px) {
   .wework .box-1,
   .wework .box-2,
   .wework .box-3 {
