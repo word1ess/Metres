@@ -7,23 +7,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
-    <link rel="stylesheet" href="https://cdn.plyr.io/3.6.3/plyr.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/css/lg-thumbnail.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/css/lightgallery.min.css">
-    <link rel="stylesheet" href="css/style.min.css">
-    <script defer src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css?_v=20231128201039">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20231128201039">
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.6.3/plyr.css?_v=20231128201039">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/css/lg-thumbnail.min.css?_v=20231128201039">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/css/lightgallery.min.css?_v=20231128201039">
+    <link rel="stylesheet" href="css/style.min.css?_v=20231128201039">
+    <script defer src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&_v=20231128201039" type="text/javascript"></script>
     <script
         defer
         src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
         crossorigin="anonymous"
     ></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/lightgallery.min.js"></script>
-    <script defer src="js/app.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js?_v=20231128201039"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?_v=20231128201039"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/lightgallery.min.js?_v=20231128201039"></script>
+    <script defer src="js/app.min.js?_v=20231128201039"></script>
     <title>квартиры-студии в центре москвы</title>
 </head>
 
@@ -117,259 +117,42 @@
                         </div>
                     </div>
                     <div class="container">
-                        <form action="#" class="filters__row filter__block">
-                            <div class="filters__filter">
-                                <h2>Цена</h2>
-                                <div class="filters__inputs bx-filter-parameters-box prop-PRICE">
-                                    <div class="input">
-                                        <p>от</p>
-                                        <div class="dropdowns__link">
-                                            <p class="js-selected-count">10</p>
-                                            <ul class="dropdowns__block checkbox-c" style="display: none;">
-                                                <li>
-                                                    <label class="checkbox bx-filter-param-label">
-                                                        <input
-                                                            class="checkbox__input"
-                                                            type="radio"
-                                                            value="11"
-                                                            name="from"
-                                                            id="from"
-                                                            onclick="smartFilter.click(this)"
-                                                        >
-                                                        <span>11</span>
-                                                    </label>
-                                                </li>
-                                                <li>
-                                                    <label class="checkbox bx-filter-param-label">
-                                                        <input
-                                                            class="checkbox__input"
-                                                            type="checkbox"
-                                                            value="12"
-                                                            name="from"
-                                                            id="from"
-                                                            onclick="smartFilter.click(this)"
-                                                        >
-                                                        <span>12</span>
-                                                    </label>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <p>
-                                            <b>млн</b>
-                                        </p>
-                                    </div>
-                                    <i>-</i>
-                                    <div class="input">
-                                        <p>до</p>
-                                        <div class="dropdowns__link">
-                                            <p class="js-selected-count">10</p>
-                                            <ul class="dropdowns__block checkbox-c" style="display: none;">
-                                                <li>
-                                                    <label class="checkbox bx-filter-param-label" for="to">
-                                                        <input
-                                                            class="checkbox__input"
-                                                            type="checkbox"
-                                                            value="11"
-                                                            name="to"
-                                                            id="to"
-                                                            onclick="smartFilter.click(this)"
-                                                        >
-                                                        <span>11</span>
-                                                    </label>
-                                                </li>
-                                                <li>
-                                                    <label class="checkbox bx-filter-param-label">
-                                                        <input
-                                                            class="checkbox__input"
-                                                            type="checkbox"
-                                                            value="12"
-                                                            name="to"
-                                                            id="to"
-                                                            onclick="smartFilter.click(this)"
-                                                        >
-                                                        <span>12</span>
-                                                    </label>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <p>
-                                            <b>млн</b>
-                                        </p>
-                                    </div>
-                                    <span class="bx-filter-container-modef"></span>
-                                </div>
-                                <img src="/img/svgicons/plus.svg" alt="" class="plus plus-right-bottom">
-                            </div>
-                            <div class="filters__filter checkboxes">
-                                <div class="filters__inputs bx-filter-parameters-box prop-PRICE">
-                                    <label class="checkbox">
-                                        <input id="filter__checkbox" class="custom-checkbox" type="checkbox">
-                                        <p>Под сдачу</p>
-                                    </label>
-                                    <label class="checkbox">
-                                        <input id="filter__checkbox" class="custom-checkbox" type="checkbox">
-                                        <p>Для жизни</p>
-                                    </label>
-                                    <span class="bx-filter-container-modef"></span>
-                                </div>
-                            </div>
-                            <div class="filters__filter dropdowns one">
-                                <div class="dropdown bx-filter-parameters-box prop-ADDRESS">
-                                    <h2>Расположение</h2>
-                                    <div class="dropdowns__link">
-                                        <p class="js-selected-count">не выбрано</p>
-                                        <ul class="dropdowns__block checkbox-c">
-                                            <li>
-                                                <label class="checkbox bx-filter-param-label" for="arCatalogFilter_21_1034075732">
-                                                    <input
-                                                        class="checkbox__input"
-                                                        type="checkbox"
-                                                        value="Y"
-                                                        name="arCatalogFilter_21_1034075732"
-                                                        id="arCatalogFilter_21_1034075732"
-                                                        onclick="smartFilter.click(this)"
-                                                    >
-                                                    <span>Большой Златоустинский переулок, 3А</span>
-                                                </label>
-                                            </li>
-                                            <li>
-                                                <label class="checkbox bx-filter-param-label" for="arCatalogFilter_21_641526488">
-                                                    <input
-                                                        class="checkbox__input"
-                                                        type="checkbox"
-                                                        value="Y"
-                                                        name="arCatalogFilter_21_641526488"
-                                                        id="arCatalogFilter_21_641526488"
-                                                        onclick="smartFilter.click(this)"
-                                                    >
-                                                    <span>Проспект Мира д.5к1</span>
-                                                </label>
-                                            </li>
-                                            <li>
-                                                <label class="checkbox bx-filter-param-label" for="arCatalogFilter_21_1708507122">
-                                                    <input
-                                                        class="checkbox__input"
-                                                        type="checkbox"
-                                                        value="Y"
-                                                        name="arCatalogFilter_21_1708507122"
-                                                        id="arCatalogFilter_21_1708507122"
-                                                        onclick="smartFilter.click(this)"
-                                                    >
-                                                    <span>Смоленская-Сенная пл., д. 27 стр.7</span>
-                                                </label>
-                                            </li>
-                                            <li>
-                                                <label class="checkbox bx-filter-param-label" for="arCatalogFilter_21_113520051">
-                                                    <input
-                                                        class="checkbox__input"
-                                                        type="checkbox"
-                                                        value="Y"
-                                                        name="arCatalogFilter_21_113520051"
-                                                        id="arCatalogFilter_21_113520051"
-                                                        onclick="smartFilter.click(this)"
-                                                    >
-                                                    <span>ул. Бауманская, д. 35/1</span>
-                                                </label>
-                                            </li>
-                                            <li>
-                                                <label class="checkbox bx-filter-param-label" for="arCatalogFilter_21_100968669">
-                                                    <input
-                                                        class="checkbox__input"
-                                                        type="checkbox"
-                                                        value="Y"
-                                                        name="arCatalogFilter_21_100968669"
-                                                        id="arCatalogFilter_21_100968669"
-                                                        onclick="smartFilter.click(this)"
-                                                    >
-                                                    <span>ул. Красина д. 7 стр. 1</span>
-                                                </label>
-                                            </li>
-                                            <li>
-                                                <label class="checkbox bx-filter-param-label" for="arCatalogFilter_21_3578673302">
-                                                    <input
-                                                        class="checkbox__input"
-                                                        type="checkbox"
-                                                        value="Y"
-                                                        name="arCatalogFilter_21_3578673302"
-                                                        id="arCatalogFilter_21_3578673302"
-                                                        onclick="smartFilter.click(this)"
-                                                    >
-                                                    <span>ул. Новый Арбат, д. 23</span>
-                                                </label>
-                                            </li>
-                                            <li>
-                                                <label class="checkbox bx-filter-param-label" for="arCatalogFilter_21_3585239707">
-                                                    <input
-                                                        class="checkbox__input"
-                                                        type="checkbox"
-                                                        value="Y"
-                                                        name="arCatalogFilter_21_3585239707"
-                                                        id="arCatalogFilter_21_3585239707"
-                                                        onclick="smartFilter.click(this)"
-                                                    >
-                                                    <span>ул. Покровка, д. 31, стр. 1Г</span>
-                                                </label>
-                                            </li>
-                                            <li>
-                                                <label class="checkbox bx-filter-param-label" for="arCatalogFilter_21_3553232636">
-                                                    <input
-                                                        class="checkbox__input"
-                                                        type="checkbox"
-                                                        value="Y"
-                                                        name="arCatalogFilter_21_3553232636"
-                                                        id="arCatalogFilter_21_3553232636"
-                                                        onclick="smartFilter.click(this)"
-                                                    >
-                                                    <span>ул. Тверская, д. 27, стр. 1</span>
-                                                </label>
-                                            </li>
-                                            <li>
-                                                <label class="checkbox bx-filter-param-label" for="arCatalogFilter_21_1403638412">
-                                                    <input
-                                                        class="checkbox__input"
-                                                        type="checkbox"
-                                                        value="Y"
-                                                        name="arCatalogFilter_21_1403638412"
-                                                        id="arCatalogFilter_21_1403638412"
-                                                        onclick="smartFilter.click(this)"
-                                                    >
-                                                    <span>ул. Трубная, д. 29</span>
-                                                </label>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <span class="bx-filter-container-modef"></span>
-                                </div>
-                            </div>
-                        </form>
-                        <form class="filters__row filters__popup bx-filter smartfilter">
-                            <div class="filters-close mobile-close"></div>
-                            <div class="filters__filters">
-                                <div class="filters__filter first">
+                        <form action="#">
+                            <div class="filters__row filter__block">
+                                <div class="filters__filter">
                                     <h2>Цена</h2>
                                     <div class="filters__inputs bx-filter-parameters-box prop-PRICE">
                                         <div class="input">
                                             <p>от</p>
-                                            <input
-                                                type="text"
-                                                name="arCatalogFilter_3_MIN"
-                                                id="arCatalogFilter_3_MIN"
-                                                value=""
-                                                onkeyup="smartFilter.keyup(this)"
-                                            >
-                                            <select class="js-filter-select-for-input is-min" data-control-id="arCatalogFilter_3_MIN">
-                                                <option value="10" selected="">10</option>
-                                                <option value="11">11</option>
-                                                <option value="12">12</option>
-                                                <option value="13">13</option>
-                                                <option value="14">14</option>
-                                                <option value="15">15</option>
-                                                <option value="16">16</option>
-                                                <option value="17">17</option>
-                                                <option value="18">18</option>
-                                                <option value="19">19</option>
-                                                <option value="20">20</option>
-                                            </select>
+                                            <div class="dropdowns__link">
+                                                <p class="js-selected-count">10</p>
+                                                <ul class="dropdowns__block checkbox-c" style="display: none;">
+                                                    <li>
+                                                        <label class="checkbox bx-filter-param-label">
+                                                            <input
+                                                                class="checkbox__input"
+                                                                type="radio"
+                                                                value="11"
+                                                                name="from"
+                                                                id="from"
+                                                            >
+                                                            <span>11</span>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="checkbox bx-filter-param-label">
+                                                            <input
+                                                                class="checkbox__input"
+                                                                type="checkbox"
+                                                                value="12"
+                                                                name="from"
+                                                                id="from"
+                                                            >
+                                                            <span>12</span>
+                                                        </label>
+                                                    </li>
+                                                </ul>
+                                            </div>
                                             <p>
                                                 <b>млн</b>
                                             </p>
@@ -377,26 +160,35 @@
                                         <i>-</i>
                                         <div class="input">
                                             <p>до</p>
-                                            <input
-                                                type="text"
-                                                name="arCatalogFilter_3_MAX"
-                                                id="arCatalogFilter_3_MAX"
-                                                value=""
-                                                onkeyup="smartFilter.keyup(this)"
-                                            >
-                                            <select class="js-filter-select-for-input is-max" data-control-id="arCatalogFilter_3_MAX">
-                                                <option value="10">10</option>
-                                                <option value="11">11</option>
-                                                <option value="12">12</option>
-                                                <option value="13">13</option>
-                                                <option value="14">14</option>
-                                                <option value="15">15</option>
-                                                <option value="16">16</option>
-                                                <option value="17">17</option>
-                                                <option value="18">18</option>
-                                                <option value="19">19</option>
-                                                <option value="20" selected="">20</option>
-                                            </select>
+                                            <div class="dropdowns__link">
+                                                <p class="js-selected-count">10</p>
+                                                <ul class="dropdowns__block checkbox-c" style="display: none;">
+                                                    <li>
+                                                        <label class="checkbox bx-filter-param-label" for="to">
+                                                            <input
+                                                                class="checkbox__input"
+                                                                type="checkbox"
+                                                                value="11"
+                                                                name="to"
+                                                                id="to"
+                                                            >
+                                                            <span>11</span>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="checkbox bx-filter-param-label">
+                                                            <input
+                                                                class="checkbox__input"
+                                                                type="checkbox"
+                                                                value="12"
+                                                                name="to"
+                                                                id="to"
+                                                            >
+                                                            <span>12</span>
+                                                        </label>
+                                                    </li>
+                                                </ul>
+                                            </div>
                                             <p>
                                                 <b>млн</b>
                                             </p>
@@ -405,372 +197,22 @@
                                     </div>
                                     <img src="/img/svgicons/plus.svg" alt="" class="plus plus-right-bottom">
                                 </div>
-                                <div class="filters__filter second">
-                                    <h2>Этаж</h2>
-                                    <div class="filters__inputs bx-filter-parameters-box prop-FLOOR">
-                                        <div class="input">
-                                            <p>от</p>
-                                            <input
-                                                type="text"
-                                                name="arCatalogFilter_22_MIN"
-                                                id="arCatalogFilter_22_MIN"
-                                                value=""
-                                                onkeyup="smartFilter.keyup(this)"
-                                            >
-                                            <select class="js-filter-select-for-input is-min" data-control-id="arCatalogFilter_22_MIN">
-                                                <option value="1" selected="">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                            </select>
-                                        </div>
-                                        <i>-</i>
-                                        <div class="input">
-                                            <p>до</p>
-                                            <input
-                                                type="text"
-                                                name="arCatalogFilter_22_MAX"
-                                                id="arCatalogFilter_22_MAX"
-                                                value=""
-                                                onkeyup="smartFilter.keyup(this)"
-                                            >
-                                            <select class="js-filter-select-for-input is-max" data-control-id="arCatalogFilter_22_MAX">
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3" selected="">3</option>
-                                            </select>
-                                        </div>
-                                        <span class="bx-filter-container-modef"></span>
-                                    </div>
-                                    <img src="/img/svgicons/plus.svg" alt="" class="plus plus-right-bottom">
-                                </div>
-                                <div class="filters__filter dropdowns">
-                                    <div class="dropdown bx-filter-parameters-box prop-FINISHING">
-                                        <h2>Отделка</h2>
-                                        <div class="dropdowns__link">
-                                            <p class="js-selected-count">не выбрано</p>
-                                            <ul class="dropdowns__block checkbox-c" style="display: none;">
-                                                <li>
-                                                    <label class="checkbox bx-filter-param-label" for="arCatalogFilter_25_2366072709">
-                                                        <input
-                                                            class="checkbox__input"
-                                                            type="checkbox"
-                                                            value="Y"
-                                                            name="arCatalogFilter_25_2366072709"
-                                                            id="arCatalogFilter_25_2366072709"
-                                                            onclick="smartFilter.click(this)"
-                                                        >
-                                                        <span>Без отделки</span>
-                                                    </label>
-                                                </li>
-                                                <li>
-                                                    <label class="checkbox bx-filter-param-label" for="arCatalogFilter_25_4194326291">
-                                                        <input
-                                                            class="checkbox__input"
-                                                            type="checkbox"
-                                                            value="Y"
-                                                            name="arCatalogFilter_25_4194326291"
-                                                            id="arCatalogFilter_25_4194326291"
-                                                            onclick="smartFilter.click(this)"
-                                                        >
-                                                        <span>С отделкой</span>
-                                                    </label>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <span class="bx-filter-container-modef"></span>
-                                    </div>
-                                    <div class="dropdown bx-filter-parameters-box prop-METRO">
-                                        <h2>Метро</h2>
-                                        <div class="dropdowns__link">
-                                            <p class="js-selected-count">не выбрано</p>
-                                            <ul class="dropdowns__block checkbox-c">
-                                                <li>
-                                                    <label class="checkbox bx-filter-param-label" for="arCatalogFilter_4_3855300525">
-                                                        <input
-                                                            class="checkbox__input"
-                                                            type="checkbox"
-                                                            value="Y"
-                                                            name="arCatalogFilter_4_3855300525"
-                                                            id="arCatalogFilter_4_3855300525"
-                                                            onclick="smartFilter.click(this)"
-                                                        >
-                                                        <span>Бауманская</span>
-                                                    </label>
-                                                </li>
-                                                <li>
-                                                    <label class="checkbox bx-filter-param-label" for="arCatalogFilter_4_1092272958">
-                                                        <input
-                                                            class="checkbox__input"
-                                                            type="checkbox"
-                                                            value="Y"
-                                                            name="arCatalogFilter_4_1092272958"
-                                                            id="arCatalogFilter_4_1092272958"
-                                                            onclick="smartFilter.click(this)"
-                                                        >
-                                                        <span>Китай-Город</span>
-                                                    </label>
-                                                </li>
-                                                <li>
-                                                    <label class="checkbox bx-filter-param-label" for="arCatalogFilter_4_2105818262">
-                                                        <input
-                                                            class="checkbox__input"
-                                                            type="checkbox"
-                                                            value="Y"
-                                                            name="arCatalogFilter_4_2105818262"
-                                                            id="arCatalogFilter_4_2105818262"
-                                                            onclick="smartFilter.click(this)"
-                                                        >
-                                                        <span>Кузнецкий Мост</span>
-                                                    </label>
-                                                </li>
-                                                <li>
-                                                    <label class="checkbox bx-filter-param-label" for="arCatalogFilter_4_249348174">
-                                                        <input
-                                                            class="checkbox__input"
-                                                            type="checkbox"
-                                                            value="Y"
-                                                            name="arCatalogFilter_4_249348174"
-                                                            id="arCatalogFilter_4_249348174"
-                                                            onclick="smartFilter.click(this)"
-                                                        >
-                                                        <span>Курская</span>
-                                                    </label>
-                                                </li>
-                                                <li>
-                                                    <label class="checkbox bx-filter-param-label" for="arCatalogFilter_4_1161271427">
-                                                        <input
-                                                            class="checkbox__input"
-                                                            type="checkbox"
-                                                            value="Y"
-                                                            name="arCatalogFilter_4_1161271427"
-                                                            id="arCatalogFilter_4_1161271427"
-                                                            onclick="smartFilter.click(this)"
-                                                        >
-                                                        <span>Лубянка</span>
-                                                    </label>
-                                                </li>
-                                                <li>
-                                                    <label class="checkbox bx-filter-param-label" for="arCatalogFilter_4_3124704636">
-                                                        <input
-                                                            class="checkbox__input"
-                                                            type="checkbox"
-                                                            value="Y"
-                                                            name="arCatalogFilter_4_3124704636"
-                                                            id="arCatalogFilter_4_3124704636"
-                                                            onclick="smartFilter.click(this)"
-                                                        >
-                                                        <span>Маяковская</span>
-                                                    </label>
-                                                </li>
-                                                <li>
-                                                    <label class="checkbox bx-filter-param-label" for="arCatalogFilter_4_4122118427">
-                                                        <input
-                                                            class="checkbox__input"
-                                                            type="checkbox"
-                                                            value="Y"
-                                                            name="arCatalogFilter_4_4122118427"
-                                                            id="arCatalogFilter_4_4122118427"
-                                                            onclick="smartFilter.click(this)"
-                                                        >
-                                                        <span>Проспект Мира</span>
-                                                    </label>
-                                                </li>
-                                                <li>
-                                                    <label class="checkbox bx-filter-param-label" for="arCatalogFilter_4_3622894260">
-                                                        <input
-                                                            class="checkbox__input"
-                                                            type="checkbox"
-                                                            value="Y"
-                                                            name="arCatalogFilter_4_3622894260"
-                                                            id="arCatalogFilter_4_3622894260"
-                                                            onclick="smartFilter.click(this)"
-                                                        >
-                                                        <span>Смоленская</span>
-                                                    </label>
-                                                </li>
-                                                <li>
-                                                    <label class="checkbox bx-filter-param-label" for="arCatalogFilter_4_2848814387">
-                                                        <input
-                                                            class="checkbox__input"
-                                                            type="checkbox"
-                                                            value="Y"
-                                                            name="arCatalogFilter_4_2848814387"
-                                                            id="arCatalogFilter_4_2848814387"
-                                                            onclick="smartFilter.click(this)"
-                                                        >
-                                                        <span>Сухаревская</span>
-                                                    </label>
-                                                </li>
-                                                <li>
-                                                    <label class="checkbox bx-filter-param-label" for="arCatalogFilter_4_622910740">
-                                                        <input
-                                                            class="checkbox__input"
-                                                            type="checkbox"
-                                                            value="Y"
-                                                            name="arCatalogFilter_4_622910740"
-                                                            id="arCatalogFilter_4_622910740"
-                                                            onclick="smartFilter.click(this)"
-                                                        >
-                                                        <span>Трубная</span>
-                                                    </label>
-                                                </li>
-                                                <li>
-                                                    <label class="checkbox bx-filter-param-label" for="arCatalogFilter_4_3421789507">
-                                                        <input
-                                                            class="checkbox__input"
-                                                            type="checkbox"
-                                                            value="Y"
-                                                            name="arCatalogFilter_4_3421789507"
-                                                            id="arCatalogFilter_4_3421789507"
-                                                            onclick="smartFilter.click(this)"
-                                                        >
-                                                        <span>Цветной бульвар</span>
-                                                    </label>
-                                                </li>
-                                                <li>
-                                                    <label class="checkbox bx-filter-param-label" for="arCatalogFilter_4_1979568336">
-                                                        <input
-                                                            class="checkbox__input"
-                                                            type="checkbox"
-                                                            value="Y"
-                                                            name="arCatalogFilter_4_1979568336"
-                                                            id="arCatalogFilter_4_1979568336"
-                                                            onclick="smartFilter.click(this)"
-                                                        >
-                                                        <span>Чистые пруды</span>
-                                                    </label>
-                                                </li>
-                                                <li>
-                                                    <label class="checkbox bx-filter-param-label" for="arCatalogFilter_4_4243789391">
-                                                        <input
-                                                            class="checkbox__input"
-                                                            type="checkbox"
-                                                            value="Y"
-                                                            name="arCatalogFilter_4_4243789391"
-                                                            id="arCatalogFilter_4_4243789391"
-                                                            onclick="smartFilter.click(this)"
-                                                        >
-                                                        <span>Чкаловская</span>
-                                                    </label>
-                                                </li>
-                                            </ul>
-                                        </div>
+                                <div class="filters__filter checkboxes">
+                                    <div class="filters__inputs bx-filter-parameters-box prop-PRICE">
+                                        <label class="checkbox">
+                                            <input id="filter__checkbox" class="custom-checkbox" type="checkbox">
+                                            <p>Под сдачу</p>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input id="filter__checkbox" class="custom-checkbox" type="checkbox">
+                                            <p>Для жизни</p>
+                                        </label>
                                         <span class="bx-filter-container-modef"></span>
                                     </div>
                                 </div>
-                                <div class="filters__filter third">
-                                    <h2>Площадь</h2>
-                                    <div class="filters__inputs bx-filter-parameters-box prop-METERS">
-                                        <div class="input">
-                                            <p>от</p>
-                                            <input
-                                                type="text"
-                                                name="arCatalogFilter_2_MIN"
-                                                id="arCatalogFilter_2_MIN"
-                                                value=""
-                                                onkeyup="smartFilter.keyup(this)"
-                                            >
-                                            <select class="js-filter-select-for-input is-min" data-control-id="arCatalogFilter_2_MIN">
-                                                <option value="14" selected="">14</option>
-                                                <option value="15">15</option>
-                                                <option value="16">16</option>
-                                                <option value="17">17</option>
-                                                <option value="18">18</option>
-                                                <option value="19">19</option>
-                                                <option value="20">20</option>
-                                                <option value="21">21</option>
-                                                <option value="22">22</option>
-                                                <option value="23">23</option>
-                                                <option value="24">24</option>
-                                                <option value="25">25</option>
-                                                <option value="26">26</option>
-                                                <option value="27">27</option>
-                                                <option value="28">28</option>
-                                                <option value="29">29</option>
-                                                <option value="30">30</option>
-                                                <option value="31">31</option>
-                                                <option value="32">32</option>
-                                            </select>
-                                            <p>
-                                                <b>кв.м</b>
-                                            </p>
-                                        </div>
-                                        <i>-</i>
-                                        <div class="input">
-                                            <p>до</p>
-                                            <input
-                                                type="text"
-                                                name="arCatalogFilter_2_MAX"
-                                                id="arCatalogFilter_2_MAX"
-                                                value=""
-                                                onkeyup="smartFilter.keyup(this)"
-                                            >
-                                            <select class="js-filter-select-for-input is-max" data-control-id="arCatalogFilter_2_MAX">
-                                                <option value="14">14</option>
-                                                <option value="15">15</option>
-                                                <option value="16">16</option>
-                                                <option value="17">17</option>
-                                                <option value="18">18</option>
-                                                <option value="19">19</option>
-                                                <option value="20">20</option>
-                                                <option value="21">21</option>
-                                                <option value="22">22</option>
-                                                <option value="23">23</option>
-                                                <option value="24">24</option>
-                                                <option value="25">25</option>
-                                                <option value="26">26</option>
-                                                <option value="27">27</option>
-                                                <option value="28">28</option>
-                                                <option value="29">29</option>
-                                                <option value="30">30</option>
-                                                <option value="31">31</option>
-                                                <option value="32" selected="">32</option>
-                                            </select>
-                                            <p>
-                                                <b>кв.м</b>
-                                            </p>
-                                        </div>
-                                        <span class="bx-filter-container-modef"></span>
-                                    </div>
-                                    <img src="/img/svgicons/plus.svg" alt="" class="plus plus-right-bottom">
-                                </div>
-                                <div class="filters__filter fourth">
-                                    <h2>Высота потолков</h2>
-                                    <div class="filters__inputs bx-filter-parameters-box prop-CEILING_HEIGHT">
-                                        <div class="input">
-                                            <p>от</p>
-                                            <input
-                                                type="text"
-                                                name="arCatalogFilter_24_MIN"
-                                                id="arCatalogFilter_24_MIN"
-                                                value=""
-                                                onkeyup="smartFilter.keyup(this)"
-                                            >
-                                            <select class="js-filter-select-for-input is-min" data-control-id="arCatalogFilter_24_MIN">
-                                                <option value="3.0" selected="">3.0</option>
-                                            </select>
-                                        </div>
-                                        <i>-</i>
-                                        <div class="input">
-                                            <p>до</p>
-                                            <input
-                                                type="text"
-                                                name="arCatalogFilter_24_MAX"
-                                                id="arCatalogFilter_24_MAX"
-                                                value=""
-                                                onkeyup="smartFilter.keyup(this)"
-                                            >
-                                            <select class="js-filter-select-for-input is-max" data-control-id="arCatalogFilter_24_MAX">
-                                                <option value="3.0" selected="">3.0</option>
-                                            </select>
-                                        </div>
-                                        <span class="bx-filter-container-modef"></span>
-                                    </div>
-                                    <img src="/img/svgicons/plus.svg" alt="" class="plus plus-right-bottom">
-                                </div>
-                                <div class="filters__filter seven dropdowns one">
+                                <div class="filters__filter dropdowns one">
                                     <div class="dropdown bx-filter-parameters-box prop-ADDRESS">
-                                        <h2>Адрес</h2>
+                                        <h2>Расположение</h2>
                                         <div class="dropdowns__link">
                                             <p class="js-selected-count">не выбрано</p>
                                             <ul class="dropdowns__block checkbox-c">
@@ -779,10 +221,9 @@
                                                         <input
                                                             class="checkbox__input"
                                                             type="checkbox"
-                                                            value="Y"
+                                                            value="Большой Златоустинский переулок, 3А"
                                                             name="arCatalogFilter_21_1034075732"
                                                             id="arCatalogFilter_21_1034075732"
-                                                            onclick="smartFilter.click(this)"
                                                         >
                                                         <span>Большой Златоустинский переулок, 3А</span>
                                                     </label>
@@ -795,7 +236,6 @@
                                                             value="Y"
                                                             name="arCatalogFilter_21_641526488"
                                                             id="arCatalogFilter_21_641526488"
-                                                            onclick="smartFilter.click(this)"
                                                         >
                                                         <span>Проспект Мира д.5к1</span>
                                                     </label>
@@ -808,7 +248,6 @@
                                                             value="Y"
                                                             name="arCatalogFilter_21_1708507122"
                                                             id="arCatalogFilter_21_1708507122"
-                                                            onclick="smartFilter.click(this)"
                                                         >
                                                         <span>Смоленская-Сенная пл., д. 27 стр.7</span>
                                                     </label>
@@ -821,7 +260,6 @@
                                                             value="Y"
                                                             name="arCatalogFilter_21_113520051"
                                                             id="arCatalogFilter_21_113520051"
-                                                            onclick="smartFilter.click(this)"
                                                         >
                                                         <span>ул. Бауманская, д. 35/1</span>
                                                     </label>
@@ -834,7 +272,6 @@
                                                             value="Y"
                                                             name="arCatalogFilter_21_100968669"
                                                             id="arCatalogFilter_21_100968669"
-                                                            onclick="smartFilter.click(this)"
                                                         >
                                                         <span>ул. Красина д. 7 стр. 1</span>
                                                     </label>
@@ -846,8 +283,7 @@
                                                             type="checkbox"
                                                             value="Y"
                                                             name="arCatalogFilter_21_3578673302"
-                                                            id="arCatalogFilter_21_3578673302"
-                                                            onclick="smartFilter.click(this)"
+                                                            id="arCatalogFilter_21_3578673302""
                                                         >
                                                         <span>ул. Новый Арбат, д. 23</span>
                                                     </label>
@@ -860,7 +296,6 @@
                                                             value="Y"
                                                             name="arCatalogFilter_21_3585239707"
                                                             id="arCatalogFilter_21_3585239707"
-                                                            onclick="smartFilter.click(this)"
                                                         >
                                                         <span>ул. Покровка, д. 31, стр. 1Г</span>
                                                     </label>
@@ -897,29 +332,585 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="bx-filter-popup-result is-invisible is-active" id="modef" style="display: inline-block;">
-                                <div class="filter-result-qty">
-                                    Найдено:
-                                    <span id="modef_num">4</span>
-                                </div>
-                                <div>
-                                    <a class="js-set-filter btn m-hide" href="/apartments/msk/filter/price-to-10/apply/" target="">Показать</a>
-                                    <div class="m-show">
-                                        <a class="js-tools-popup-filter-close btn" href="javascript:;" target="">Показать</a>
+                            <div class="filters__row filters__popup bx-filter smartfilter">
+                                <div class="filters-close mobile-close"></div>
+                                <div class="filters__filters">
+                                    <div class="filters__filter first">
+                                        <h2>Цена</h2>
+                                        <div class="filters__inputs bx-filter-parameters-box prop-PRICE">
+                                            <div class="input">
+                                                <p>от</p>
+                                                <input
+                                                    type="text"
+                                                    name="arCatalogFilter_3_MIN"
+                                                    id="arCatalogFilter_3_MIN"
+                                                    value=""
+                                                    onkeyup="smartFilter.keyup(this)"
+                                                >
+                                                <select class="js-filter-select-for-input is-min" data-control-id="arCatalogFilter_3_MIN">
+                                                    <option value="10" selected="">10</option>
+                                                    <option value="11">11</option>
+                                                    <option value="12">12</option>
+                                                    <option value="13">13</option>
+                                                    <option value="14">14</option>
+                                                    <option value="15">15</option>
+                                                    <option value="16">16</option>
+                                                    <option value="17">17</option>
+                                                    <option value="18">18</option>
+                                                    <option value="19">19</option>
+                                                    <option value="20">20</option>
+                                                </select>
+                                                <p>
+                                                    <b>млн</b>
+                                                </p>
+                                            </div>
+                                            <i>-</i>
+                                            <div class="input">
+                                                <p>до</p>
+                                                <input
+                                                    type="text"
+                                                    name="arCatalogFilter_3_MAX"
+                                                    id="arCatalogFilter_3_MAX"
+                                                    value=""
+                                                    onkeyup="smartFilter.keyup(this)"
+                                                >
+                                                <select class="js-filter-select-for-input is-max" data-control-id="arCatalogFilter_3_MAX">
+                                                    <option value="10">10</option>
+                                                    <option value="11">11</option>
+                                                    <option value="12">12</option>
+                                                    <option value="13">13</option>
+                                                    <option value="14">14</option>
+                                                    <option value="15">15</option>
+                                                    <option value="16">16</option>
+                                                    <option value="17">17</option>
+                                                    <option value="18">18</option>
+                                                    <option value="19">19</option>
+                                                    <option value="20" selected="">20</option>
+                                                </select>
+                                                <p>
+                                                    <b>млн</b>
+                                                </p>
+                                            </div>
+                                            <span class="bx-filter-container-modef"></span>
+                                        </div>
+                                        <img src="/img/svgicons/plus.svg" alt="" class="plus plus-right-bottom">
+                                    </div>
+                                    <div class="filters__filter second">
+                                        <h2>Этаж</h2>
+                                        <div class="filters__inputs bx-filter-parameters-box prop-FLOOR">
+                                            <div class="input">
+                                                <p>от</p>
+                                                <input
+                                                    type="text"
+                                                    name="arCatalogFilter_22_MIN"
+                                                    id="arCatalogFilter_22_MIN"
+                                                    value=""
+                                                    onkeyup="smartFilter.keyup(this)"
+                                                >
+                                                <select class="js-filter-select-for-input is-min" data-control-id="arCatalogFilter_22_MIN">
+                                                    <option value="1" selected="">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                </select>
+                                            </div>
+                                            <i>-</i>
+                                            <div class="input">
+                                                <p>до</p>
+                                                <input
+                                                    type="text"
+                                                    name="arCatalogFilter_22_MAX"
+                                                    id="arCatalogFilter_22_MAX"
+                                                    value=""
+                                                    onkeyup="smartFilter.keyup(this)"
+                                                >
+                                                <select class="js-filter-select-for-input is-max" data-control-id="arCatalogFilter_22_MAX">
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3" selected="">3</option>
+                                                </select>
+                                            </div>
+                                            <span class="bx-filter-container-modef"></span>
+                                        </div>
+                                        <img src="/img/svgicons/plus.svg" alt="" class="plus plus-right-bottom">
+                                    </div>
+                                    <div class="filters__filter dropdowns">
+                                        <div class="dropdown bx-filter-parameters-box prop-FINISHING">
+                                            <h2>Отделка</h2>
+                                            <div class="dropdowns__link">
+                                                <p class="js-selected-count">не выбрано</p>
+                                                <ul class="dropdowns__block checkbox-c" style="display: none;">
+                                                    <li>
+                                                        <label class="checkbox bx-filter-param-label" for="arCatalogFilter_25_2366072709">
+                                                            <input
+                                                                class="checkbox__input"
+                                                                type="checkbox"
+                                                                value="Y"
+                                                                name="arCatalogFilter_25_2366072709"
+                                                                id="arCatalogFilter_25_2366072709"
+                                                                onclick="smartFilter.click(this)"
+                                                            >
+                                                            <span>Без отделки</span>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="checkbox bx-filter-param-label" for="arCatalogFilter_25_4194326291">
+                                                            <input
+                                                                class="checkbox__input"
+                                                                type="checkbox"
+                                                                value="Y"
+                                                                name="arCatalogFilter_25_4194326291"
+                                                                id="arCatalogFilter_25_4194326291"
+                                                                onclick="smartFilter.click(this)"
+                                                            >
+                                                            <span>С отделкой</span>
+                                                        </label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <span class="bx-filter-container-modef"></span>
+                                        </div>
+                                        <div class="dropdown bx-filter-parameters-box prop-METRO">
+                                            <h2>Метро</h2>
+                                            <div class="dropdowns__link">
+                                                <p class="js-selected-count">не выбрано</p>
+                                                <ul class="dropdowns__block checkbox-c">
+                                                    <li>
+                                                        <label class="checkbox bx-filter-param-label" for="arCatalogFilter_4_3855300525">
+                                                            <input
+                                                                class="checkbox__input"
+                                                                type="checkbox"
+                                                                value="Y"
+                                                                name="arCatalogFilter_4_3855300525"
+                                                                id="arCatalogFilter_4_3855300525"
+                                                                onclick="smartFilter.click(this)"
+                                                            >
+                                                            <span>Бауманская</span>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="checkbox bx-filter-param-label" for="arCatalogFilter_4_1092272958">
+                                                            <input
+                                                                class="checkbox__input"
+                                                                type="checkbox"
+                                                                value="Y"
+                                                                name="arCatalogFilter_4_1092272958"
+                                                                id="arCatalogFilter_4_1092272958"
+                                                                onclick="smartFilter.click(this)"
+                                                            >
+                                                            <span>Китай-Город</span>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="checkbox bx-filter-param-label" for="arCatalogFilter_4_2105818262">
+                                                            <input
+                                                                class="checkbox__input"
+                                                                type="checkbox"
+                                                                value="Y"
+                                                                name="arCatalogFilter_4_2105818262"
+                                                                id="arCatalogFilter_4_2105818262"
+                                                                onclick="smartFilter.click(this)"
+                                                            >
+                                                            <span>Кузнецкий Мост</span>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="checkbox bx-filter-param-label" for="arCatalogFilter_4_249348174">
+                                                            <input
+                                                                class="checkbox__input"
+                                                                type="checkbox"
+                                                                value="Y"
+                                                                name="arCatalogFilter_4_249348174"
+                                                                id="arCatalogFilter_4_249348174"
+                                                                onclick="smartFilter.click(this)"
+                                                            >
+                                                            <span>Курская</span>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="checkbox bx-filter-param-label" for="arCatalogFilter_4_1161271427">
+                                                            <input
+                                                                class="checkbox__input"
+                                                                type="checkbox"
+                                                                value="Y"
+                                                                name="arCatalogFilter_4_1161271427"
+                                                                id="arCatalogFilter_4_1161271427"
+                                                                onclick="smartFilter.click(this)"
+                                                            >
+                                                            <span>Лубянка</span>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="checkbox bx-filter-param-label" for="arCatalogFilter_4_3124704636">
+                                                            <input
+                                                                class="checkbox__input"
+                                                                type="checkbox"
+                                                                value="Y"
+                                                                name="arCatalogFilter_4_3124704636"
+                                                                id="arCatalogFilter_4_3124704636"
+                                                                onclick="smartFilter.click(this)"
+                                                            >
+                                                            <span>Маяковская</span>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="checkbox bx-filter-param-label" for="arCatalogFilter_4_4122118427">
+                                                            <input
+                                                                class="checkbox__input"
+                                                                type="checkbox"
+                                                                value="Y"
+                                                                name="arCatalogFilter_4_4122118427"
+                                                                id="arCatalogFilter_4_4122118427"
+                                                                onclick="smartFilter.click(this)"
+                                                            >
+                                                            <span>Проспект Мира</span>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="checkbox bx-filter-param-label" for="arCatalogFilter_4_3622894260">
+                                                            <input
+                                                                class="checkbox__input"
+                                                                type="checkbox"
+                                                                value="Y"
+                                                                name="arCatalogFilter_4_3622894260"
+                                                                id="arCatalogFilter_4_3622894260"
+                                                                onclick="smartFilter.click(this)"
+                                                            >
+                                                            <span>Смоленская</span>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="checkbox bx-filter-param-label" for="arCatalogFilter_4_2848814387">
+                                                            <input
+                                                                class="checkbox__input"
+                                                                type="checkbox"
+                                                                value="Y"
+                                                                name="arCatalogFilter_4_2848814387"
+                                                                id="arCatalogFilter_4_2848814387"
+                                                                onclick="smartFilter.click(this)"
+                                                            >
+                                                            <span>Сухаревская</span>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="checkbox bx-filter-param-label" for="arCatalogFilter_4_622910740">
+                                                            <input
+                                                                class="checkbox__input"
+                                                                type="checkbox"
+                                                                value="Y"
+                                                                name="arCatalogFilter_4_622910740"
+                                                                id="arCatalogFilter_4_622910740"
+                                                                onclick="smartFilter.click(this)"
+                                                            >
+                                                            <span>Трубная</span>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="checkbox bx-filter-param-label" for="arCatalogFilter_4_3421789507">
+                                                            <input
+                                                                class="checkbox__input"
+                                                                type="checkbox"
+                                                                value="Y"
+                                                                name="arCatalogFilter_4_3421789507"
+                                                                id="arCatalogFilter_4_3421789507"
+                                                                onclick="smartFilter.click(this)"
+                                                            >
+                                                            <span>Цветной бульвар</span>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="checkbox bx-filter-param-label" for="arCatalogFilter_4_1979568336">
+                                                            <input
+                                                                class="checkbox__input"
+                                                                type="checkbox"
+                                                                value="Y"
+                                                                name="arCatalogFilter_4_1979568336"
+                                                                id="arCatalogFilter_4_1979568336"
+                                                                onclick="smartFilter.click(this)"
+                                                            >
+                                                            <span>Чистые пруды</span>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="checkbox bx-filter-param-label" for="arCatalogFilter_4_4243789391">
+                                                            <input
+                                                                class="checkbox__input"
+                                                                type="checkbox"
+                                                                value="Y"
+                                                                name="arCatalogFilter_4_4243789391"
+                                                                id="arCatalogFilter_4_4243789391"
+                                                                onclick="smartFilter.click(this)"
+                                                            >
+                                                            <span>Чкаловская</span>
+                                                        </label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <span class="bx-filter-container-modef"></span>
+                                        </div>
+                                    </div>
+                                    <div class="filters__filter third">
+                                        <h2>Площадь</h2>
+                                        <div class="filters__inputs bx-filter-parameters-box prop-METERS">
+                                            <div class="input">
+                                                <p>от</p>
+                                                <input
+                                                    type="text"
+                                                    name="arCatalogFilter_2_MIN"
+                                                    id="arCatalogFilter_2_MIN"
+                                                    value=""
+                                                    onkeyup="smartFilter.keyup(this)"
+                                                >
+                                                <select class="js-filter-select-for-input is-min" data-control-id="arCatalogFilter_2_MIN">
+                                                    <option value="14" selected="">14</option>
+                                                    <option value="15">15</option>
+                                                    <option value="16">16</option>
+                                                    <option value="17">17</option>
+                                                    <option value="18">18</option>
+                                                    <option value="19">19</option>
+                                                    <option value="20">20</option>
+                                                    <option value="21">21</option>
+                                                    <option value="22">22</option>
+                                                    <option value="23">23</option>
+                                                    <option value="24">24</option>
+                                                    <option value="25">25</option>
+                                                    <option value="26">26</option>
+                                                    <option value="27">27</option>
+                                                    <option value="28">28</option>
+                                                    <option value="29">29</option>
+                                                    <option value="30">30</option>
+                                                    <option value="31">31</option>
+                                                    <option value="32">32</option>
+                                                </select>
+                                                <p>
+                                                    <b>кв.м</b>
+                                                </p>
+                                            </div>
+                                            <i>-</i>
+                                            <div class="input">
+                                                <p>до</p>
+                                                <input
+                                                    type="text"
+                                                    name="arCatalogFilter_2_MAX"
+                                                    id="arCatalogFilter_2_MAX"
+                                                    value=""
+                                                    onkeyup="smartFilter.keyup(this)"
+                                                >
+                                                <select class="js-filter-select-for-input is-max" data-control-id="arCatalogFilter_2_MAX">
+                                                    <option value="14">14</option>
+                                                    <option value="15">15</option>
+                                                    <option value="16">16</option>
+                                                    <option value="17">17</option>
+                                                    <option value="18">18</option>
+                                                    <option value="19">19</option>
+                                                    <option value="20">20</option>
+                                                    <option value="21">21</option>
+                                                    <option value="22">22</option>
+                                                    <option value="23">23</option>
+                                                    <option value="24">24</option>
+                                                    <option value="25">25</option>
+                                                    <option value="26">26</option>
+                                                    <option value="27">27</option>
+                                                    <option value="28">28</option>
+                                                    <option value="29">29</option>
+                                                    <option value="30">30</option>
+                                                    <option value="31">31</option>
+                                                    <option value="32" selected="">32</option>
+                                                </select>
+                                                <p>
+                                                    <b>кв.м</b>
+                                                </p>
+                                            </div>
+                                            <span class="bx-filter-container-modef"></span>
+                                        </div>
+                                        <img src="/img/svgicons/plus.svg" alt="" class="plus plus-right-bottom">
+                                    </div>
+                                    <div class="filters__filter fourth">
+                                        <h2>Высота потолков</h2>
+                                        <div class="filters__inputs bx-filter-parameters-box prop-CEILING_HEIGHT">
+                                            <div class="input">
+                                                <p>от</p>
+                                                <input
+                                                    type="text"
+                                                    name="arCatalogFilter_24_MIN"
+                                                    id="arCatalogFilter_24_MIN"
+                                                    value=""
+                                                    onkeyup="smartFilter.keyup(this)"
+                                                >
+                                                <select class="js-filter-select-for-input is-min" data-control-id="arCatalogFilter_24_MIN">
+                                                    <option value="3.0" selected="">3.0</option>
+                                                </select>
+                                            </div>
+                                            <i>-</i>
+                                            <div class="input">
+                                                <p>до</p>
+                                                <input
+                                                    type="text"
+                                                    name="arCatalogFilter_24_MAX"
+                                                    id="arCatalogFilter_24_MAX"
+                                                    value=""
+                                                    onkeyup="smartFilter.keyup(this)"
+                                                >
+                                                <select class="js-filter-select-for-input is-max" data-control-id="arCatalogFilter_24_MAX">
+                                                    <option value="3.0" selected="">3.0</option>
+                                                </select>
+                                            </div>
+                                            <span class="bx-filter-container-modef"></span>
+                                        </div>
+                                        <img src="/img/svgicons/plus.svg" alt="" class="plus plus-right-bottom">
+                                    </div>
+                                    <div class="filters__filter seven dropdowns one">
+                                        <div class="dropdown bx-filter-parameters-box prop-ADDRESS">
+                                            <h2>Адрес</h2>
+                                            <div class="dropdowns__link">
+                                                <p class="js-selected-count">не выбрано</p>
+                                                <ul class="dropdowns__block checkbox-c">
+                                                    <li>
+                                                        <label class="checkbox bx-filter-param-label" for="arCatalogFilter_21_1034075732">
+                                                            <input
+                                                                class="checkbox__input"
+                                                                type="checkbox"
+                                                                value="Y"
+                                                                name="arCatalogFilter_21_1034075732"
+                                                                id="arCatalogFilter_21_1034075732"
+                                                                onclick="smartFilter.click(this)"
+                                                            >
+                                                            <span>Большой Златоустинский переулок, 3А</span>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="checkbox bx-filter-param-label" for="arCatalogFilter_21_641526488">
+                                                            <input
+                                                                class="checkbox__input"
+                                                                type="checkbox"
+                                                                value="Y"
+                                                                name="arCatalogFilter_21_641526488"
+                                                                id="arCatalogFilter_21_641526488"
+                                                                onclick="smartFilter.click(this)"
+                                                            >
+                                                            <span>Проспект Мира д.5к1</span>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="checkbox bx-filter-param-label" for="arCatalogFilter_21_1708507122">
+                                                            <input
+                                                                class="checkbox__input"
+                                                                type="checkbox"
+                                                                value="Y"
+                                                                name="arCatalogFilter_21_1708507122"
+                                                                id="arCatalogFilter_21_1708507122"
+                                                                onclick="smartFilter.click(this)"
+                                                            >
+                                                            <span>Смоленская-Сенная пл., д. 27 стр.7</span>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="checkbox bx-filter-param-label" for="arCatalogFilter_21_113520051">
+                                                            <input
+                                                                class="checkbox__input"
+                                                                type="checkbox"
+                                                                value="Y"
+                                                                name="arCatalogFilter_21_113520051"
+                                                                id="arCatalogFilter_21_113520051"
+                                                                onclick="smartFilter.click(this)"
+                                                            >
+                                                            <span>ул. Бауманская, д. 35/1</span>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="checkbox bx-filter-param-label" for="arCatalogFilter_21_100968669">
+                                                            <input
+                                                                class="checkbox__input"
+                                                                type="checkbox"
+                                                                value="Y"
+                                                                name="arCatalogFilter_21_100968669"
+                                                                id="arCatalogFilter_21_100968669"
+                                                                onclick="smartFilter.click(this)"
+                                                            >
+                                                            <span>ул. Красина д. 7 стр. 1</span>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="checkbox bx-filter-param-label" for="arCatalogFilter_21_3578673302">
+                                                            <input
+                                                                class="checkbox__input"
+                                                                type="checkbox"
+                                                                value="Y"
+                                                                name="arCatalogFilter_21_3578673302"
+                                                                id="arCatalogFilter_21_3578673302"
+                                                                onclick="smartFilter.click(this)"
+                                                            >
+                                                            <span>ул. Новый Арбат, д. 23</span>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="checkbox bx-filter-param-label" for="arCatalogFilter_21_3585239707">
+                                                            <input
+                                                                class="checkbox__input"
+                                                                type="checkbox"
+                                                                value="Y"
+                                                                name="arCatalogFilter_21_3585239707"
+                                                                id="arCatalogFilter_21_3585239707"
+                                                                onclick="smartFilter.click(this)"
+                                                            >
+                                                            <span>ул. Покровка, д. 31, стр. 1Г</span>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="checkbox bx-filter-param-label" for="arCatalogFilter_21_3553232636">
+                                                            <input
+                                                                class="checkbox__input"
+                                                                type="checkbox"
+                                                                value="Y"
+                                                                name="arCatalogFilter_21_3553232636"
+                                                                id="arCatalogFilter_21_3553232636"
+                                                                onclick="smartFilter.click(this)"
+                                                            >
+                                                            <span>ул. Тверская, д. 27, стр. 1</span>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="checkbox bx-filter-param-label" for="arCatalogFilter_21_1403638412">
+                                                            <input
+                                                                class="checkbox__input"
+                                                                type="checkbox"
+                                                                value="Y"
+                                                                name="arCatalogFilter_21_1403638412"
+                                                                id="arCatalogFilter_21_1403638412"
+                                                                onclick="smartFilter.click(this)"
+                                                            >
+                                                            <span>ул. Трубная, д. 29</span>
+                                                        </label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <span class="bx-filter-container-modef"></span>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="filters__btns">
-                                <a href="javascript:;" class="btn-black js-filter-show-result" data-view-type="map">Показать на карте</a>
-                                <a href="javascript:;" class="btn-orange js-filter-show-result" data-view-type="list">Найти</a>
-                                <button
-                                    style="display: none;"
-                                    class="btn-orange"
-                                    type="button"
-                                    id="set_filter"
-                                    name="set_filter"
-                                >Найти</button>
-                                <button class="btn-bordered call-modal">Нужна консультация</button>
+                                <div class="bx-filter-popup-result is-invisible is-active" id="modef" style="display: inline-block;">
+                                    <div class="filter-result-qty">
+                                        Найдено:
+                                        <span id="modef_num">4</span>
+                                    </div>
+                                    <div>
+                                        <a class="js-set-filter btn m-hide" href="/apartments/msk/filter/price-to-10/apply/" target="">Показать</a>
+                                        <div class="m-show">
+                                            <a class="js-tools-popup-filter-close btn" href="javascript:;" target="">Показать</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="filters__btns">
+                                    <a href="javascript:;" class="btn-black js-filter-show-result" data-view-type="map">Показать на карте</a>
+                                    <a href="javascript:;" class="btn-orange js-filter-show-result" data-view-type="list">Найти</a>
+                                    <button
+                                        style="display: none;"
+                                        class="btn-orange"
+                                        type="button"
+                                        id="set_filter"
+                                        name="set_filter"
+                                    >Найти</button>
+                                    <button class="btn-bordered call-modal">Нужна консультация</button>
+                                </div>
                             </div>
                         </form>
                         <div class="filters__type">
@@ -972,12 +963,12 @@
                             </h2>
                             <div class="page-header__btns">
                                 <div data-row="list" class="page-header__btn active">
-                                    <img class="pc" src="img/appartments/btn-list.png" alt="">
+                                    <picture><source srcset="img/appartments/btn-list.webp" type="image/webp"><img class="pc" src="img/appartments/btn-list.png" alt=""></picture>
                                     <img class="mobile" src="img/appartments/btn-list-mobile.svg" alt="">
                                     Списком
                                 </div>
                                 <div data-row="map" class="page-header__btn">
-                                    <img class="pc" src="img/appartments/btn-map.png" alt="">
+                                    <picture><source srcset="img/appartments/btn-map.webp" type="image/webp"><img class="pc" src="img/appartments/btn-map.png" alt=""></picture>
                                     <img class="mobile" src="img/appartments/btn-map-mobile.svg" alt="">
                                     На карте
                                 </div>
@@ -990,7 +981,7 @@
                                     <sup>2</sup>
                                 </div>
                                 <div class="item-img">
-                                    <img src="img/appartments/1.png" alt="image">
+                                    <picture><source srcset="img/appartments/1.webp" type="image/webp"><img src="img/appartments/1.png" alt="image"></picture>
                                 </div>
                                 <div class="item-info">
                                     <div class="item-price">14 200 400 ₽</div>
@@ -1007,7 +998,7 @@
                                     <sup>2</sup>
                                 </div>
                                 <div class="item-img">
-                                    <img src="img/appartments/1.png" alt="image">
+                                    <picture><source srcset="img/appartments/1.webp" type="image/webp"><img src="img/appartments/1.png" alt="image"></picture>
                                 </div>
                                 <div class="item-info">
                                     <div class="item-price">14 200 400 ₽</div>
@@ -1024,7 +1015,7 @@
                                     <sup>2</sup>
                                 </div>
                                 <div class="item-img">
-                                    <img src="img/appartments/1.png" alt="image">
+                                    <picture><source srcset="img/appartments/1.webp" type="image/webp"><img src="img/appartments/1.png" alt="image"></picture>
                                 </div>
                                 <div class="item-info">
                                     <div class="item-price">14 200 400 ₽</div>
@@ -1041,7 +1032,7 @@
                                     <sup>2</sup>
                                 </div>
                                 <div class="item-img">
-                                    <img src="img/appartments/1.png" alt="image">
+                                    <picture><source srcset="img/appartments/1.webp" type="image/webp"><img src="img/appartments/1.png" alt="image"></picture>
                                 </div>
                                 <div class="item-info">
                                     <div class="item-price">14 200 400 ₽</div>
@@ -1058,7 +1049,7 @@
                                     <sup>2</sup>
                                 </div>
                                 <div class="item-img">
-                                    <img src="img/appartments/1.png" alt="image">
+                                    <picture><source srcset="img/appartments/1.webp" type="image/webp"><img src="img/appartments/1.png" alt="image"></picture>
                                 </div>
                                 <div class="item-info">
                                     <div class="item-price">14 200 400 ₽</div>
@@ -1075,7 +1066,7 @@
                                     <sup>2</sup>
                                 </div>
                                 <div class="item-img">
-                                    <img src="img/appartments/1.png" alt="image">
+                                    <picture><source srcset="img/appartments/1.webp" type="image/webp"><img src="img/appartments/1.png" alt="image"></picture>
                                 </div>
                                 <div class="item-info">
                                     <div class="item-price">14 200 400 ₽</div>
@@ -1092,7 +1083,7 @@
                                     <sup>2</sup>
                                 </div>
                                 <div class="item-img">
-                                    <img src="img/appartments/1.png" alt="image">
+                                    <picture><source srcset="img/appartments/1.webp" type="image/webp"><img src="img/appartments/1.png" alt="image"></picture>
                                 </div>
                                 <div class="item-info">
                                     <div class="item-price">14 200 400 ₽</div>
@@ -1109,7 +1100,7 @@
                                     <sup>2</sup>
                                 </div>
                                 <div class="item-img">
-                                    <img src="img/appartments/1.png" alt="image">
+                                    <picture><source srcset="img/appartments/1.webp" type="image/webp"><img src="img/appartments/1.png" alt="image"></picture>
                                 </div>
                                 <div class="item-info">
                                     <div class="item-price">14 200 400 ₽</div>
@@ -1126,7 +1117,7 @@
                                     <sup>2</sup>
                                 </div>
                                 <div class="item-img">
-                                    <img src="img/appartments/1.png" alt="image">
+                                    <picture><source srcset="img/appartments/1.webp" type="image/webp"><img src="img/appartments/1.png" alt="image"></picture>
                                 </div>
                                 <div class="item-info">
                                     <div class="item-price">14 200 400 ₽</div>
@@ -1143,7 +1134,7 @@
                                     <sup>2</sup>
                                 </div>
                                 <div class="item-img">
-                                    <img src="img/appartments/1.png" alt="image">
+                                    <picture><source srcset="img/appartments/1.webp" type="image/webp"><img src="img/appartments/1.png" alt="image"></picture>
                                 </div>
                                 <div class="item-info">
                                     <div class="item-price">14 200 400 ₽</div>
@@ -1160,7 +1151,7 @@
                                     <sup>2</sup>
                                 </div>
                                 <div class="item-img">
-                                    <img src="img/appartments/1.png" alt="image">
+                                    <picture><source srcset="img/appartments/1.webp" type="image/webp"><img src="img/appartments/1.png" alt="image"></picture>
                                 </div>
                                 <div class="item-info">
                                     <div class="item-price">14 200 400 ₽</div>
@@ -1177,7 +1168,7 @@
                                     <sup>2</sup>
                                 </div>
                                 <div class="item-img">
-                                    <img src="img/appartments/1.png" alt="image">
+                                    <picture><source srcset="img/appartments/1.webp" type="image/webp"><img src="img/appartments/1.png" alt="image"></picture>
                                 </div>
                                 <div class="item-info">
                                     <div class="item-price">14 200 400 ₽</div>
@@ -1289,7 +1280,7 @@
                                 <div class="logo-2">
                                     <img src="img/svgicons/logo-small.svg" alt="logo">
                                 </div>
-                                <img src="img/index/advantages/advantages-img1.jpg" alt="img">
+                                <picture><source srcset="img/index/advantages/advantages-img1.webp" type="image/webp"><img src="img/index/advantages/advantages-img1.jpg" alt="img"></picture>
                                 <a href="http://" class="btn btn-orange call-modal">
                                     <img src="img/svgicons/interview-1.svg" alt="interview">
                                     получить консультацию
@@ -1298,7 +1289,7 @@
                         </div>
                     </div>
                     <div class="decor decor-img">
-                        <img src="img/index/advantages/advantages-img2.jpg" alt="advantages" class="img-2">
+                        <picture><source srcset="img/index/advantages/advantages-img2.webp" type="image/webp"><img src="img/index/advantages/advantages-img2.jpg" alt="advantages" class="img-2"></picture>
                     </div>
                     <div class="decor decor-right flex">
                         <div class="flex --dir-col">
@@ -1353,7 +1344,7 @@
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="comments__comment">
-                                        <!-- <img src="./img/comments-img.jpg" alt="comments"> -->
+                                        <!-- <picture><source srcset="./img/comments-img.webp" type="image/webp"><img src="./img/comments-img.jpg" alt="comments"></picture> -->
                                         <div class="plyr__video-embed" id="player">
                                             <iframe src="https://www.youtube.com/embed/fdhrXAUC0W4?si=Vp_cB6aE9UeGNaf8" allowtransparency></iframe>
                                         </div>
@@ -1362,7 +1353,7 @@
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="comments__comment">
-                                        <!-- <img src="./img/comments-img.jpg" alt="comments"> -->
+                                        <!-- <picture><source srcset="./img/comments-img.webp" type="image/webp"><img src="./img/comments-img.jpg" alt="comments"></picture> -->
                                         <div class="plyr__video-embed" id="player">
                                             <iframe src="https://www.youtube.com/embed/fdhrXAUC0W4?si=Vp_cB6aE9UeGNaf8" allowtransparency></iframe>
                                         </div>
@@ -1371,7 +1362,7 @@
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="comments__comment">
-                                        <!-- <img src="./img/comments-img.jpg" alt="comments"> -->
+                                        <!-- <picture><source srcset="./img/comments-img.webp" type="image/webp"><img src="./img/comments-img.jpg" alt="comments"></picture> -->
                                         <div class="plyr__video-embed" id="player">
                                             <iframe src="https://www.youtube.com/embed/fdhrXAUC0W4?si=Vp_cB6aE9UeGNaf8" allowtransparency></iframe>
                                         </div>
@@ -1380,7 +1371,7 @@
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="comments__comment">
-                                        <!-- <img src="./img/comments-img.jpg" alt="comments"> -->
+                                        <!-- <picture><source srcset="./img/comments-img.webp" type="image/webp"><img src="./img/comments-img.jpg" alt="comments"></picture> -->
                                         <div class="plyr__video-embed" id="player">
                                             <iframe src="https://www.youtube.com/embed/fdhrXAUC0W4?si=Vp_cB6aE9UeGNaf8" allowtransparency></iframe>
                                         </div>
@@ -1446,7 +1437,7 @@
                                 </form>
                             </div>
                             <div class="application__img">
-                                <img src="img/index/applications/applications-img.jpg" alt="">
+                                <picture><source srcset="img/index/applications/applications-img.webp" type="image/webp"><img src="img/index/applications/applications-img.jpg" alt=""></picture>
                             </div>
                         </div>
                     </div>
@@ -1480,7 +1471,7 @@
                         </div>
                     </div>
                     <div class="decor decor-img">
-                        <img src="img/index/applications/applications-img2.jpg" alt="main" class="img">
+                        <picture><source srcset="img/index/applications/applications-img2.webp" type="image/webp"><img src="img/index/applications/applications-img2.jpg" alt="main" class="img"></picture>
                     </div>
                     <div class="decor decor-right flex">
                         <div class="flex --dir-col --just-end">
@@ -1523,7 +1514,7 @@
                         </div>
                         <div class="section__inner">
                             <div class="section__img">
-                                <img src="img/index/investors/investors-img1.jpg" alt="img" class="section__bg-img">
+                                <picture><source srcset="img/index/investors/investors-img1.webp" type="image/webp"><img src="img/index/investors/investors-img1.jpg" alt="img" class="section__bg-img"></picture>
                             </div>
                             <div class="section__info">
                                 <h2 class="section__subtitle">
