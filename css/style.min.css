@@ -3150,8 +3150,7 @@ input[type=search]:focus {
 .application {
   background-color: #000;
   color: #fff;
-  height: 961px;
-  padding: 113px 0 112px;
+  height: 769px;
 }
 .application__title {
   font-weight: 500;
@@ -3164,6 +3163,7 @@ input[type=search]:focus {
   flex-flow: row nowrap;
   align-items: center;
   gap: 86px;
+  padding: 25px 0px;
 }
 .application__info {
   padding-bottom: 15px;
@@ -3187,6 +3187,7 @@ input[type=search]:focus {
 .application__img {
   position: relative;
   z-index: 5;
+  top: -25px;
 }
 .application .decor-right {
   left: auto;
@@ -3245,10 +3246,6 @@ input[type=search]:focus {
 .application .decor-left .box-1, .application .decor-left .box-9, .application .decor-left .box-10 {
   background: #fff;
   border-color: #f0f0f0;
-}
-.application .decor-left .box-11 {
-  border-color: #f0f0f0;
-  background: #f0f0f0;
 }
 .application .decor-left .box-5 {
   background: #ff5e03;
